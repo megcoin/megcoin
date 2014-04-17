@@ -146,7 +146,7 @@ public:
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed.megcoin.com"));
 
         // Workaround for Boost not being quite compatible with C++11;
-        std::vector<unsigned char> pka = list_of(30);
+        std::vector<unsigned char> pka = list_of(20); //`M`
         base58Prefixes[PUBKEY_ADDRESS] = pka;
         
         std::vector<unsigned char> sca = list_of(22);
@@ -221,7 +221,7 @@ public:
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         
-        std::vector<unsigned char> pka = list_of(113);
+        std::vector<unsigned char> pka = list_of(47); //p
         base58Prefixes[PUBKEY_ADDRESS] = pka;
         std::vector<unsigned char> sca = list_of(196);
         base58Prefixes[SCRIPT_ADDRESS] = sca;

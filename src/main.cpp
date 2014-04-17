@@ -1126,45 +1126,24 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
-    int64_t nSubsidy = 500000 * COIN;
+    int64_t nSubsidy = 100000 * COIN;
 
-    std::string cseed_str = prevHash.ToString().substr(7,7);
-    const char* cseed = cseed_str.c_str();
-    long seed = hex2long(cseed);
-    int rand = generateMTRandom(seed, 999999);
-    int rand1 = 0;
-
-    if(nHeight < 100000)
-    {
-        nSubsidy = (1 + rand) * COIN;
-    }
-    else if(nHeight < 145000)
-    {
-        cseed_str = prevHash.ToString().substr(7,7);
-        cseed = cseed_str.c_str();
-        seed = hex2long(cseed);
-        rand1 = generateMTRandom(seed, 499999);
-        nSubsidy = (1 + rand1) * COIN;
-    }
-    else if(nHeight < 600000)
+    if(nHeight < 600000)
     {
         nSubsidy >>= (nHeight / 100000);
     }
     else
     {
-        nSubsidy = 10000 * COIN;
+        nSubsidy = 20000 * COIN; //20K after primary mining
     }
 
     return nSubsidy + nFees;
 }
 
 // New Difficulty adjustement and reward scheme by /u/lleti, rog1121, and DigiByte (DigiShield Developers).
-static const int64_t nTargetTimespan = 4 * 60 * 60; // Megcoin: every 4 hours
-static const int64_t nTargetTimespanNEW = 60 ; // Megcoin: every 1 minute
+static const int64_t nTargetTimespan = 60 ; // Megcoin: every 1 minute
 static const int64_t nTargetSpacing = 60; // Megcoin: 1 minute
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
-
-static const int64_t nDiffChangeTarget = 145000; // Patch effective @ block 145000
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1191,7 +1170,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
             // Maximum 10% adjustment...
             bnResult = (bnResult * 110) / 100;
             // ... in best-case exactly 4-times-normal target time
-            nTime -= nTargetTimespanNEW*4;
+            nTime -= nTargetTimespan*4;
         }
     }
     if (bnResult > bnLimit)
@@ -1204,16 +1183,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
 
     int nHeight = pindexLast->nHeight + 1;
-    bool fNewDifficultyProtocol = (nHeight >= nDiffChangeTarget);
     
     int64_t retargetTimespan = nTargetTimespan;
     int64_t retargetSpacing = nTargetSpacing;
     int64_t retargetInterval = nInterval;
     
-    if (fNewDifficultyProtocol) {
-        retargetInterval = nTargetTimespanNEW / nTargetSpacing;
-        retargetTimespan = nTargetTimespanNEW;
-    }
+        retargetInterval = nTargetTimespan / nTargetSpacing;
+        retargetTimespan = nTargetTimespan;
     
     // Genesis block
     if (pindexLast == NULL)
@@ -1257,33 +1233,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     int64_t nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
     LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
     
-    if (fNewDifficultyProtocol) //DigiShield implementation - thanks to RealSolid & WDC for this code
+     //DigiShield implementation - thanks to RealSolid & WDC for this code
     {
         // amplitude filter - thanks to daft27 for this code
         nActualTimespan = retargetTimespan + (nActualTimespan - retargetTimespan)/8;
 
         if (nActualTimespan < (retargetTimespan - (retargetTimespan/4)) ) nActualTimespan = (retargetTimespan - (retargetTimespan/4));
         if (nActualTimespan > (retargetTimespan + (retargetTimespan/2)) ) nActualTimespan = (retargetTimespan + (retargetTimespan/2));
-    }
-    else if (pindexLast->nHeight+1 > 10000) {
-        if (nActualTimespan < nTargetTimespan/4)
-            nActualTimespan = nTargetTimespan/4;
-        if (nActualTimespan > nTargetTimespan*4)
-            nActualTimespan = nTargetTimespan*4;
-    }
-    else if (pindexLast->nHeight+1 > 5000)
-    {
-        if (nActualTimespan < nTargetTimespan/8)
-            nActualTimespan = nTargetTimespan/8;
-        if (nActualTimespan > nTargetTimespan*4)
-            nActualTimespan = nTargetTimespan*4;
-    }
-    else
-    {
-        if (nActualTimespan < nTargetTimespan/16)
-            nActualTimespan = nTargetTimespan/16;
-        if (nActualTimespan > nTargetTimespan*4)
-            nActualTimespan = nTargetTimespan*4;
     }
 
     // Retarget
@@ -1556,8 +1512,6 @@ bool CheckInputs(const CTransaction& tx, CValidationState &state, CCoinsViewCach
             // If prev is coinbase, check that it's matured
             if (coins.IsCoinBase()) {
                 int minDepth = COINBASE_MATURITY;
-                if(coins.nHeight >= COINBASE_MATURITY_SWITCH)
-                    minDepth = COINBASE_MATURITY_NEW;
                 if (nSpendHeight - coins.nHeight < minDepth)
                     return state.Invalid(
                         error("CheckInputs() : tried to spend coinbase at depth %d", nSpendHeight - coins.nHeight),
