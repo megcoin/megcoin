@@ -124,7 +124,7 @@ public:
         //     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
         //     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
         //   vMerkleTree: 4a5e1e
-        const char* pszTimestamp = "Nintondo";
+        const char* pszTimestamp = "megan griffin";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -140,8 +140,10 @@ public:
         genesis.nNonce   = 99943;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
-        assert(genesis.hashMerkleRoot == uint256("0x5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69"));
+        cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
+        cout.flush();
+        //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
+        assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
 
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed.megcoin.com"));
 
@@ -212,6 +214,8 @@ public:
         genesis.nTime = 1397704779;
         genesis.nNonce = 997879;
         hashGenesisBlock = genesis.GetHash();
+        cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
+        cout.flush();
         assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
 
         vFixedSeeds.clear();
