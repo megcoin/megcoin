@@ -1161,7 +1161,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnLimit)
     {
-        if(chainActive.Height()+1<nDiffChangeTarget){
+        if(chainActive.Height()+1<100){ //1st few blocks are flexible while the network is shaky
             // Maximum 400% adjustment...
             bnResult *= 4;
             // ... in best-case exactly 4-times-normal target time
