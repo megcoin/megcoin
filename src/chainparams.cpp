@@ -135,7 +135,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1386325540;
+        genesis.nTime    = 1397704779;
         genesis.nBits    = 0x1e0ffff0;
         genesis.nNonce   = 99943;
 
@@ -209,15 +209,14 @@ public:
         strDataDir = "testnet3";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1391503289;
+        genesis.nTime = 1397704779;
         genesis.nNonce = 997879;
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("testmeg.lionservers.de", "testmeg-seed.lionservers.de"));
-        vSeeds.push_back(CDNSSeedData("lionservers.de", "testmeg-seed-static.lionservers.de"));
+        vSeeds.push_back(CDNSSeedData("testnet.megcoin.com", "testnet.megcoin.org"));
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         

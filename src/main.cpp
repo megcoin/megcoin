@@ -1126,7 +1126,7 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
-    int64_t nSubsidy = 100000 * COIN;
+    int64_t nSubsidy = 1000000 * COIN;
 
     if(nHeight < 600000)
     {
