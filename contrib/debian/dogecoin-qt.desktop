@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Dogecoin
-Comment=Dogecoin P2P Cryptocurrency
-Comment[fr]=Dogecoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Dogecoin, eşten eşe kriptografik sanal para birimi
-Exec=dogecoin-qt %u
+Name=Megcoin
+Comment=Megcoin P2P Cryptocurrency
+Comment[fr]=Megcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Megcoin, eşten eşe kriptografik sanal para birimi
+Exec=megcoin-qt %u
 Terminal=false
 Type=Application
-Icon=dogecoin128
-MimeType=x-scheme-handler/dogecoin;
+Icon=megcoin128
+MimeType=x-scheme-handler/megcoin;
 Categories=Office;Finance;

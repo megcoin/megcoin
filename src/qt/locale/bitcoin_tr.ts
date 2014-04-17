@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Dogecoin Core</source>
-        <translation>Dogecoin Çekirdeği hakkında</translation>
+        <source>About Megcoin Core</source>
+        <translation>Megcoin Çekirdeği hakkında</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Dogecoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Dogecoin Çekirdek&lt;/b&gt; sürümü</translation>
+        <source>&lt;b&gt;Megcoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Megcoin Çekirdek&lt;/b&gt; sürümü</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Dogecoin Core developers</source>
-        <translation>Dogecoin Çekirdeği geliştiricileri</translation>
+        <source>The Megcoin Core developers</source>
+        <translation>Megcoin Çekirdeği geliştiricileri</translation>
     </message>
 </context>
 <context>
@@ -97,12 +97,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="-30"/>
         <source>Choose the address to send coins to</source>
-        <translation>Dogecoin yollanacak adresi seç</translation>
+        <translation>Megcoin yollanacak adresi seç</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Choose the address to receive coins with</source>
-        <translation>Dogeoin alınacak adresi seç</translation>
+        <translation>Megoin alınacak adresi seç</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -121,13 +121,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Dogecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme yapmak için kullanacağınız Dogeoin adreslerinizdir. Dogecoin yollamadan önce meblağı ve alıcı adresini daima kontrol ediniz.</translation>
+        <source>These are your Megcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme yapmak için kullanacağınız Megoin adreslerinizdir. Megcoin yollamadan önce meblağı ve alıcı adresini daima kontrol ediniz.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Dogecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödeme almak için kullanacağınız Dogecoin adreslerinizdir. Her muamele için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
+        <source>These are your Megcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödeme almak için kullanacağınız Megcoin adreslerinizdir. Her muamele için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -247,7 +247,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DOGECOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEGCOINS&lt;/b&gt;!</source>
         <translation>Uyarı: Eğer cüzdanınızı şifrelerseniz ve parolanızı kaybederseniz, &lt;b&gt;TÜM BİTCOİNLERİNİZİ KAYBEDERSİNİZ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Dogecoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Dogecoins from being stolen by malware infecting your computer.</source>
-        <translation>Şifreleme işlemini tamamlamak için Dogecoin şimdi kapanacaktır. Cüzdanınızı şifrelemenin, Dogecoinlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
+        <source>Megcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Megcoins from being stolen by malware infecting your computer.</source>
+        <translation>Şifreleme işlemini tamamlamak için Megcoin şimdi kapanacaktır. Cüzdanınızı şifrelemenin, Megcoinlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -368,8 +368,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Dogecoin Core</source>
-        <translation>Dogecoin hakkında bilgi göster</translation>
+        <source>Show information about Megcoin Core</source>
+        <translation>Megcoin hakkında bilgi göster</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -429,13 +429,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>Bir Dogecoin adresine Dogecoin yolla</translation>
+        <source>Send coins to a Megcoin address</source>
+        <translation>Bir Megcoin adresine Megcoin yolla</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Dogecoin Core</source>
-        <translation>Dogecoin seçeneklerinin yapılandırmasını değiştir</translation>
+        <source>Modify configuration options for Megcoin Core</source>
+        <translation>Megcoin seçeneklerinin yapılandırmasını değiştir</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -464,8 +464,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+430"/>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Megcoin</source>
+        <translation>Megcoin</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
-        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için Dogecoin adresleri ile imzala</translation>
+        <source>Sign messages with your Megcoin addresses to prove you own them</source>
+        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için Megcoin adresleri ile imzala</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
-        <translation>Belirtilen Dogecoin adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified Megcoin addresses</source>
+        <translation>Belirtilen Megcoin adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -536,19 +536,19 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-401"/>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Çekirdeği</translation>
+        <source>Megcoin Core</source>
+        <translation>Megcoin Çekirdeği</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and dogecoin: URIs)</source>
-        <translation>Ödeme talep et (QR kodu ve dogecoin URI&apos;si oluşturur)</translation>
+        <source>Request payments (generates QR codes and megcoin: URIs)</source>
+        <translation>Ödeme talep et (QR kodu ve megcoin URI&apos;si oluşturur)</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About Dogecoin Core</source>
-        <translation>Dogecoin Çekirdeği &amp;hakkında</translation>
+        <source>&amp;About Megcoin Core</source>
+        <translation>Megcoin Çekirdeği &amp;hakkında</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -562,8 +562,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a dogecoin: URI or payment request</source>
-        <translation>Bir dogecoin: bağlantısı ya da ödeme talebi aç</translation>
+        <source>Open a megcoin: URI or payment request</source>
+        <translation>Bir megcoin: bağlantısı ya da ödeme talebi aç</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,19 +572,19 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the Dogecoin Core help message to get a list with possible Dogecoin Core command-line options</source>
-        <translation>Dogecoin komut satırı seçeneklerinin listesini elde etmek için Dogecoin Çekirdeği yardım mesajını göster</translation>
+        <source>Show the Megcoin Core help message to get a list with possible Megcoin Core command-line options</source>
+        <translation>Megcoin komut satırı seçeneklerinin listesini elde etmek için Megcoin Çekirdeği yardım mesajını göster</translation>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>Dogecoin client</source>
-        <translation>Dogecoin istemcisi</translation>
+        <source>Megcoin client</source>
+        <translation>Megcoin istemcisi</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to Dogecoin network</source>
-        <translation><numerusform>Dogecoin şebekesine %n faal bağlantı</numerusform><numerusform>Dogecoin şebekesine %n faal bağlantı</numerusform></translation>
+        <source>%n active connection(s) to Megcoin network</source>
+        <translation><numerusform>Megcoin şebekesine %n faal bağlantı</numerusform><numerusform>Megcoin şebekesine %n faal bağlantı</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -691,8 +691,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+438"/>
-        <source>A fatal error occurred. Dogecoin Core can no longer continue safely and will quit.</source>
-        <translation>Ciddi bir hata oluştu. Dogecoin artık güvenli bir şekilde işlemeye devam edemez ve kapanacaktır.</translation>
+        <source>A fatal error occurred. Megcoin Core can no longer continue safely and will quit.</source>
+        <translation>Ciddi bir hata oluştu. Megcoin artık güvenli bir şekilde işlemeye devam edemez ve kapanacaktır.</translation>
     </message>
 </context>
 <context>
@@ -1049,8 +1049,8 @@ Adres: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Dogecoin address.</source>
-        <translation>Girilen &quot;%1&quot; adresi geçerli bir Dogecoin adresi değildir.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Megcoin address.</source>
+        <translation>Girilen &quot;%1&quot; adresi geçerli bir Megcoin adresi değildir.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1095,13 +1095,13 @@ Adres: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>Dogecoin Core - Command-line options</source>
-        <translation>Dogecoin Çekirdeği - Komut satırı seçenekleri</translation>
+        <source>Megcoin Core - Command-line options</source>
+        <translation>Megcoin Çekirdeği - Komut satırı seçenekleri</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+38"/>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Çekirdeği</translation>
+        <source>Megcoin Core</source>
+        <translation>Megcoin Çekirdeği</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1153,18 +1153,18 @@ Adres: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Dogecoin Core.</source>
-        <translation>Dogecoin Çekirdeğine hoş geldiniz.</translation>
+        <source>Welcome to Megcoin Core.</source>
+        <translation>Megcoin Çekirdeğine hoş geldiniz.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Dogecoin Core will store its data.</source>
-        <translation>Bu programı ilk kez başlattığınızdan dolayı Dogecoin Çekirdeğinin verilerini nereye saklayacağını seçebilirsiniz.</translation>
+        <source>As this is the first time the program is launched, you can choose where Megcoin Core will store its data.</source>
+        <translation>Bu programı ilk kez başlattığınızdan dolayı Megcoin Çekirdeğinin verilerini nereye saklayacağını seçebilirsiniz.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Dogecoin Core will download and store a copy of the Dogecoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Dogecoin çekirdeği Dogecoin blok zincirinin bir kopyasını indirip saklayacaktır. Asgari %1GB bouyutunda veri bu klasörde saklanacak ve zamanla bu boyut artacaktır. Cüzdan da bu klasörde saklanacaktır. </translation>
+        <source>Megcoin Core will download and store a copy of the Megcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Megcoin çekirdeği Megcoin blok zincirinin bir kopyasını indirip saklayacaktır. Asgari %1GB bouyutunda veri bu klasörde saklanacak ve zamanla bu boyut artacaktır. Cüzdan da bu klasörde saklanacaktır. </translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1178,8 +1178,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Megcoin</source>
+        <translation>Megcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1254,13 +1254,13 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Dogecoin Core after logging in to the system.</source>
-        <translation>Sistemde oturum açıldığında Dogecoin&apos;i otomatik olarak başlat.</translation>
+        <source>Automatically start Megcoin Core after logging in to the system.</source>
+        <translation>Sistemde oturum açıldığında Megcoin&apos;i otomatik olarak başlat.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Dogecoin Core on system login</source>
-        <translation>Dogecoin&apos;i sistem oturumuyla &amp;başlat</translation>
+        <source>&amp;Start Megcoin Core on system login</source>
+        <translation>Megcoin&apos;i sistem oturumuyla &amp;başlat</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1289,8 +1289,8 @@ Adres: %4
     </message>
     <message>
         <location line="+58"/>
-        <source>Connect to the Dogecoin network through a SOCKS proxy.</source>
-        <translation>Dogecoin şebekesine bir SOCKS vekil sunucusu vasıtasıyla bağlan.</translation>
+        <source>Connect to the Megcoin network through a SOCKS proxy.</source>
+        <translation>Megcoin şebekesine bir SOCKS vekil sunucusu vasıtasıyla bağlan.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1324,8 +1324,8 @@ Adres: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Dogecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide Dogecoin istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the Megcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide Megcoin istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1394,8 +1394,8 @@ Adres: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Dogecoin Core.</source>
-        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar Dogecoin tekrar başlatıldığında etkinleşecektir.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Megcoin Core.</source>
+        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar Megcoin tekrar başlatıldığında etkinleşecektir.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1405,12 +1405,12 @@ Adres: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Dogecoin gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>Megcoin gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Dogecoin addresses in the transaction list or not.</source>
-        <translation>Muamele listesinde Dogecoin adreslerinin gösterilip gösterilmeyeceklerini belirler.</translation>
+        <source>Whether to show Megcoin addresses in the transaction list or not.</source>
+        <translation>Muamele listesinde Megcoin adreslerinin gösterilip gösterilmeyeceklerini belirler.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1484,7 +1484,7 @@ Adres: %4
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogecoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Megcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Görüntülenen veriler zaman aşımına uğramış olabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak şebeke ile eşleşir ancak bu işlem henüz tamamlanmamıştır.</translation>
     </message>
     <message>
@@ -1554,8 +1554,8 @@ Adres: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Dogecoin address or malformed URI parameters.</source>
-        <translation>URI okunamadı! Sebebi geçersiz bir Dogecoin adresi veya hatalı URI parametreleri olabilir.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Megcoin address or malformed URI parameters.</source>
+        <translation>URI okunamadı! Sebebi geçersiz bir Megcoin adresi veya hatalı URI parametreleri olabilir.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1574,8 +1574,8 @@ Adres: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start dogecoin: click-to-pay handler</source>
-        <translation>Dogecoin başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <source>Cannot start megcoin: click-to-pay handler</source>
+        <translation>Megcoin başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -1643,8 +1643,8 @@ Adres: %4
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Megcoin</source>
+        <translation>Megcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1814,8 +1814,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Dogecoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Güncel veri klasöründen Dogecoin hata ayıklama kütük dosyasını açar. Büyük kütük dosyaları için bu birkaç saniye alabilir.</translation>
+        <source>Open the Megcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Güncel veri klasöründen Megcoin hata ayıklama kütük dosyasını açar. Büyük kütük dosyaları için bu birkaç saniye alabilir.</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1824,8 +1824,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Dogecoin Core RPC console.</source>
-        <translation>Dogecoin RPC konsoluna hoş geldiniz.</translation>
+        <source>Welcome to the Megcoin Core RPC console.</source>
+        <translation>Megcoin RPC konsoluna hoş geldiniz.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1907,8 +1907,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dogecoin network.</source>
-        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir mesaj. Not: Bu mesaj ödeme ile birlikte Dogecoin şebekesi üzerinden gönderilmeyecektir.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Megcoin network.</source>
+        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir mesaj. Not: Bu mesaj ödeme ile birlikte Megcoin şebekesi üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2069,7 +2069,7 @@ Adres: %4
         <location filename="../sendcoinsdialog.cpp" line="+381"/>
         <location line="+80"/>
         <source>Send Coins</source>
-        <translation>Dogecoin yolla</translation>
+        <translation>Megcoin yolla</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -2191,8 +2191,8 @@ Adres: %4
     </message>
     <message>
         <location line="-136"/>
-        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
-        <translation>Dogecoin adresi giriniz (mesela DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
+        <source>Enter a Megcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <translation>Megcoin adresi giriniz (mesela DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2281,8 +2281,8 @@ Adres: %4
     </message>
     <message>
         <location line="+112"/>
-        <source>Warning: Invalid Dogecoin address</source>
-        <translation>Uyarı: geçersiz Dogecoin adresi</translation>
+        <source>Warning: Invalid Megcoin address</source>
+        <translation>Uyarı: geçersiz Megcoin adresi</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2383,8 +2383,8 @@ Adres: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the Dogecoin URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
-        <translation>Dogecoin URI&apos;siyle ilişkili ve bilginiz için muameleyle saklanacak bir mesaj. Not: Bu mesaj Dogecoin şebekesi üzerinden gönderilmeyecektir.</translation>
+        <source>A message that was attached to the Megcoin URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Megcoin network.</source>
+        <translation>Megcoin URI&apos;siyle ilişkili ve bilginiz için muameleyle saklanacak bir mesaj. Not: Bu mesaj Megcoin şebekesi üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <location line="+958"/>
@@ -2415,16 +2415,16 @@ Adres: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
-        <translation>Dogecoin adresi giriniz (mesela DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
+        <source>Enter a Megcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <translation>Megcoin adresi giriniz (mesela DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
 </context>
 <context>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>Dogecoin Core is shutting down...</source>
-        <translation>Dogecoin Çekirdeği kapanıyor...</translation>
+        <source>Megcoin Core is shutting down...</source>
+        <translation>Megcoin Çekirdeği kapanıyor...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2493,8 +2493,8 @@ Adres: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Dogecoin address</source>
-        <translation>Bu Dogecoin adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
+        <source>Sign the message to prove you own this Megcoin address</source>
+        <translation>Bu Megcoin adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2529,8 +2529,8 @@ Adres: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Dogecoin address</source>
-        <translation>Belirtilen Dogecoin adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified Megcoin address</source>
+        <translation>Belirtilen Megcoin adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2545,8 +2545,8 @@ Adres: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+29"/>
         <location line="+3"/>
-        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
-        <translation>Dogecoin adresi giriniz (mesela DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
+        <source>Enter a Megcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <translation>Megcoin adresi giriniz (mesela DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2555,8 +2555,8 @@ Adres: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Dogecoin signature</source>
-        <translation>Dogecoin imzası gir</translation>
+        <source>Enter Megcoin signature</source>
+        <translation>Megcoin imzası gir</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -2629,13 +2629,13 @@ Adres: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Çekirdeği</translation>
+        <source>Megcoin Core</source>
+        <translation>Megcoin Çekirdeği</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The Dogecoin Core developers</source>
-        <translation>Dogecoin Çekirdeği geliştiricileri</translation>
+        <source>The Megcoin Core developers</source>
+        <translation>Megcoin Çekirdeği geliştiricileri</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2783,7 +2783,7 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan dogecoin&apos;lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu &quot;kabul edilmedi&quot; olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan megcoin&apos;lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu &quot;kabul edilmedi&quot; olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3155,7 +3155,7 @@ Adres: %4
     <message>
         <location filename="../walletmodel.cpp" line="+245"/>
         <source>Send Coins</source>
-        <translation>Dogecoin yolla</translation>
+        <translation>Megcoin yolla</translation>
     </message>
 </context>
 <context>
@@ -3202,7 +3202,7 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>megcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+221"/>
         <source>Usage:</source>
@@ -3225,13 +3225,13 @@ Adres: %4
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: dogecoin.conf)</source>
-        <translation>Yapılandırma dosyası belirt (varsayılan: dogecoin.conf)</translation>
+        <source>Specify configuration file (default: megcoin.conf)</source>
+        <translation>Yapılandırma dosyası belirt (varsayılan: megcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: dogecoind.pid)</source>
-        <translation>Pid dosyası belirt (varsayılan: dogecoind.pid)</translation>
+        <source>Specify pid file (default: megcoind.pid)</source>
+        <translation>Pid dosyası belirt (varsayılan: megcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -3308,24 +3308,24 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=dogecoinrpc
+rpcuser=megcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Megcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, şu yapılandırma dosyasında rpc parolası belirtmeniz gerekir:
 %s
 Aşağıdaki rastgele oluşturulan parolayı kullanmanız tavsiye edilir:
-rpcuser=dogecoinrpc
+rpcuser=megcoinrpc
 rpcpassword=%s
 (bu parolayı hatırlamanız gerekli değildir)
 Kullanıcı ismi ile parolanın FARKLI olmaları gerekir.
 Dosya mevcut değilse, sadece sahibi için okumayla sınırlı izin ile oluşturunuz.
 Sorunlar hakkında bildiri almak için alertnotify unsurunu ayarlamanız tavsiye edilir;
-mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
+mesela: alertnotify=echo %%s | mail -s &quot;Megcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3345,8 +3345,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Dogecoin Core is probably already running.</source>
-        <translation>%s veri dizininde kilit elde edilemedi. Dogecoin muhtemelen hâlihazırda çalışmaktadır.</translation>
+        <source>Cannot obtain a lock on data directory %s. Megcoin Core is probably already running.</source>
+        <translation>%s veri dizininde kilit elde edilemedi. Megcoin muhtemelen hâlihazırda çalışmaktadır.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3376,7 +3376,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     <message>
         <location line="+18"/>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - dogecoin oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - megcoin oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3390,8 +3390,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Dogecoin Core will not work properly.</source>
-        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olup olmadığını kontrol ediniz! Saatiniz doğru değilse Dogecoin gerektiği gibi çalışamaz.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Megcoin Core will not work properly.</source>
+        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olup olmadığını kontrol ediniz! Saatiniz doğru değilse Megcoin gerektiği gibi çalışamaz.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3425,13 +3425,13 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Dogecoin Core Daemon</source>
-        <translation>Dogecoin Çekirdek servisi</translation>
+        <source>Megcoin Core Daemon</source>
+        <translation>Megcoin Çekirdek servisi</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Dogecoin Core RPC client version</source>
-        <translation>Dogecoin RPC istemci sürümü</translation>
+        <source>Megcoin Core RPC client version</source>
+        <translation>Megcoin RPC istemci sürümü</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3576,7 +3576,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Dogecoin oluştur (varsayılan: 0)</translation>
+        <translation>Megcoin oluştur (varsayılan: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3630,8 +3630,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to Dogecoin Core server</source>
-        <translation>Dogecoin sunucusuna komut gönder</translation>
+        <source>Send command to Megcoin Core server</source>
+        <translation>Megcoin sunucusuna komut gönder</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3650,8 +3650,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Dogecoin Core server</source>
-        <translation>Dogecoin sunucusunu başlat</translation>
+        <source>Start Megcoin Core server</source>
+        <translation>Megcoin sunucusunu başlat</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3660,8 +3660,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use dogecoin-cli):</source>
-        <translation>Kullanım (önerilmemektedir, dogecoin-cli kullanın):</translation>
+        <source>Usage (deprecated, use megcoin-cli):</source>
+        <translation>Kullanım (önerilmemektedir, megcoin-cli kullanın):</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3925,13 +3925,13 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Dogecoin Core</source>
-        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: cüzdanın daha yeni bir Dogecoin sürümüne ihtiyacı var</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Megcoin Core</source>
+        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: cüzdanın daha yeni bir Megcoin sürümüne ihtiyacı var</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Dogecoin Core to complete</source>
-        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için Dogecoin&apos;i yeniden başlatınız</translation>
+        <source>Wallet needed to be rewritten: restart Megcoin Core to complete</source>
+        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için Megcoin&apos;i yeniden başlatınız</translation>
     </message>
     <message>
         <location line="-100"/>
@@ -3990,8 +3990,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. Dogecoin Core is probably already running.</source>
-        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. Dogecoin muhtemelen hâlihazırda çalışmaktadır.</translation>
+        <source>Unable to bind to %s on this computer. Megcoin Core is probably already running.</source>
+        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. Megcoin muhtemelen hâlihazırda çalışmaktadır.</translation>
     </message>
     <message>
         <location line="+95"/>

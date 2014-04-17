@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2011-2013 The Litecoin developers
-// Copyright (c) 2013-2014 The Dogecoin developers
+// Copyright (c) 2013-2014 The Megcoin developers
 // Copyright (c)      2014 The Inutoshi developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -304,7 +304,7 @@ inline bool AllowFree(double dPriority)
 {
     // Large (in bytes) low-priority (new, small-coin) transactions
     // need a fee.
-        return dPriority > 100 * COIN * 1440 / 250; // Dogecoin: 1440 blocks found a day. Priority cutoff is 100 dogecoin day / 250 bytes.
+        return dPriority > 100 * COIN * 1440 / 250; // Megcoin: 1440 blocks found a day. Priority cutoff is 100 megcoin day / 250 bytes.
     }
 
 // Check whether all inputs of this transaction are valid (no double spends, scripts & sigs, amounts)

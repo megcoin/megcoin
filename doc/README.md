@@ -1,50 +1,50 @@
-Dogecoin 0.9.0rc1 BETA
+Megcoin 0.9.0rc1 BETA
 =====================
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2013 Litecoin Developers
-Copyright (c) 2013-2014 Dogecoin Developers
+Copyright (c) 2013-2014 Megcoin Developers
 
 
 Setup
 ---------------------
-[Dogecoin Core](http://dogecoin.com/en/download) is the original Dogecoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Dogecoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Megcoin Core](http://megcoin.com/en/download) is the original Megcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Megcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Dogecoin on your native platform. 
+The following are some helpful notes on how to run Megcoin on your native platform. 
 
 ### Unix
 
-You need the Qt4 run-time libraries to run Dogecoin-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run Megcoin-Qt. On Debian or Ubuntu:
 
 	sudo apt-get install libqtgui4
 
 Unpack the files into a directory and run:
 
-- bin/32/dogecoin-qt (GUI, 32-bit) or bin/32/dogecoind (headless, 32-bit)
-- bin/64/dogecoin-qt (GUI, 64-bit) or bin/64/dogecoind (headless, 64-bit)
+- bin/32/megcoin-qt (GUI, 32-bit) or bin/32/megcoind (headless, 32-bit)
+- bin/64/megcoin-qt (GUI, 64-bit) or bin/64/megcoind (headless, 64-bit)
 
 
 
 ### Windows
 
-Unpack the files into a directory, and then run dogecoin-qt.exe.
+Unpack the files into a directory, and then run megcoin-qt.exe.
 
 ### OSX
 
-Drag Dogecoin-Qt to your applications folder, and then run Dogecoin-Qt.
+Drag Megcoin-Qt to your applications folder, and then run Megcoin-Qt.
 
 ### Need Help?
 
-* See the documentation at the [Dogecoin Wiki](http://dogeco.in/)
+* See the documentation at the [Megcoin Wiki](http://megco.in/)
 for help and more information.
-* Ask for help on [#dogecoin](http://webchat.freenode.net?channels=dogecoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=dogecoin).
-* Ask for help on the [/r/dogeducation subreddit](http://reddit.com/r/dogeducation).
+* Ask for help on [#megcoin](http://webchat.freenode.net?channels=megcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=megcoin).
+* Ask for help on the [/r/megducation subreddit](http://reddit.com/r/megducation).
 
 Building
 ---------------------
-The following are developer notes on how to build Dogecoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Megcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -52,7 +52,7 @@ The following are developer notes on how to build Dogecoin on your native platfo
 
 Development
 ---------------------
-The Dogecoin repo's [root README](https://github.com/dogecoin/dogecoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Megcoin repo's [root README](https://github.com/megcoin/megcoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Coding Guidelines](coding.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

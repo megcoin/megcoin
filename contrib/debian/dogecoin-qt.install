@@ -1,6 +1,6 @@
-dogecoin-qt usr/bin
-share/pixmaps/dogecoin32.xpm usr/share/pixmaps
-share/pixmaps/dogecoin16.xpm usr/share/pixmaps
-share/pixmaps/dogecoin128.png usr/share/pixmaps
-debian/dogecoin-qt.desktop usr/share/applications
-debian/dogecoin-qt.protocol usr/share/kde4/services/
+megcoin-qt usr/bin
+share/pixmaps/megcoin32.xpm usr/share/pixmaps
+share/pixmaps/megcoin16.xpm usr/share/pixmaps
+share/pixmaps/megcoin128.png usr/share/pixmaps
+debian/megcoin-qt.desktop usr/share/applications
+debian/megcoin-qt.protocol usr/share/kde4/services/
