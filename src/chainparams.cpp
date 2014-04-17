@@ -148,7 +148,7 @@ public:
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed.megcoin.com"));
 
         // Workaround for Boost not being quite compatible with C++11;
-        std::vector<unsigned char> pka = list_of(20); //`M`
+        std::vector<unsigned char> pka = list_of(50); //`M`
         base58Prefixes[PUBKEY_ADDRESS] = pka;
         
         std::vector<unsigned char> sca = list_of(22);
@@ -210,13 +210,52 @@ public:
         nRPCPort = 44888;
         strDataDir = "testnet3";
 
-        // Modify the testnet genesis block so the timestamp is valid for a later start.
+        /*
+        genesis.nTime = 1397704779 
+block.nNonce = 2281616 
+block.GetHash = b4b7167f495fcdf4d85368a1789eb58cb4fa161c6fd9fe136a09ad4c65cfc374
+*/
         genesis.nTime = 1397704779;
-        genesis.nNonce = 997879;
+        genesis.nNonce = 2281616;
+    //    genesis.nTime = 1397704779;
+      //  genesis.nNonce = 997879;
         hashGenesisBlock = genesis.GetHash();
         cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
         cout.flush();
-        assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
+                // If genesis block hash does not match, then generate new genesis hash.
+        //if (true && genesis.GetHash() != hashGenesisBlock)
+        {
+            printf("Searching for genesis block...\n");
+            // This will figure out a valid hash and Nonce if you're
+            // creating a different genesis block:
+            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+            uint256 thash;
+            char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
+
+            while(1)
+            {
+                scrypt_1024_1_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
+                if (thash <= hashTarget)
+                    break;
+                if ((genesis.nNonce & 0xFFF) == 0)
+                {
+                    printf("nonce %08X: hash = %s (target = %s)\n",genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+                }
+                ++genesis.nNonce;
+                if (genesis.nNonce == 0)
+                {
+                    printf("NONCE WRAPPED, incrementing time\n");
+                    ++genesis.nTime;
+                }
+            }
+            printf("genesis.nTime = %u \n",genesis.nTime);
+            printf("block.nNonce = %u \n",genesis.nNonce);
+            printf("block.GetHash = %s\n",genesis.GetHash().ToString().c_str());
+        }
+
+        //genesis.print();
+        assert(genesis.GetHash() == hashGenesisBlock);
+        //assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -224,7 +263,7 @@ public:
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         
-        std::vector<unsigned char> pka = list_of(47); //p
+        std::vector<unsigned char> pka = list_of(119); //p
         base58Prefixes[PUBKEY_ADDRESS] = pka;
         std::vector<unsigned char> sca = list_of(196);
         base58Prefixes[SCRIPT_ADDRESS] = sca;
@@ -257,7 +296,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
         strDataDir = "regtest";
-        assert(hashGenesisBlock == uint256("0x3d2160a3b5dc4a9d62e7e66a295f70313ac808440ef7400d6c0772171ce973a5"));
+        //assert(hashGenesisBlock == uint256("0x3d2160a3b5dc4a9d62e7e66a295f70313ac808440ef7400d6c0772171ce973a5"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }

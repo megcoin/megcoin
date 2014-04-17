@@ -257,6 +257,7 @@ static inline void xor_salsa8(uint32_t B[16], const uint32_t Bx[16])
 
 void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad)
 {
+	const int N=123;
 	uint8_t B[128];
 	uint32_t X[32];
 	uint32_t *V;
@@ -269,13 +270,13 @@ void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scrat
 	for (k = 0; k < 32; k++)
 		X[k] = le32dec(&B[4 * k]);
 
-	for (i = 0; i < 1024; i++) {
+	for (i = 0; i < N; i++) {
 		memcpy(&V[i * 32], X, 128);
 		xor_salsa8(&X[0], &X[16]);
 		xor_salsa8(&X[16], &X[0]);
 	}
-	for (i = 0; i < 1024; i++) {
-		j = 32 * (X[16] & 1023);
+	for (i = 0; i < N; i++) {
+		j = 32 * (X[16] & (N-1));
 		for (k = 0; k < 32; k++)
 			X[k] ^= V[j + k];
 		xor_salsa8(&X[0], &X[16]);
