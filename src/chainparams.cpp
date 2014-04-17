@@ -109,9 +109,10 @@ public:
         pchMessageStart[1] = 0xc0;
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xc0;
-        vAlertPubKey = ParseHex("04d4da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
+        //currently just invalid pubkey
+        vAlertPubKey = ParseHex("0554da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         nDefaultPort = 22556;
-        nRPCPort = 22555;
+        nRPCPort = 22888;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
         nSubsidyHalvingInterval = 210000;
 
@@ -143,9 +144,6 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69"));
 
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("mophides.com", "seed.mophides.com"));
-        vSeeds.push_back(CDNSSeedData("dglibrary.org", "seed.dglibrary.org"));
-        vSeeds.push_back(CDNSSeedData("megchain.info", "seed.megchain.info"));
 
         // Workaround for Boost not being quite compatible with C++11;
         std::vector<unsigned char> pka = list_of(30);
@@ -207,7 +205,7 @@ public:
         pchMessageStart[3] = 0xdc;
         vAlertPubKey = ParseHex("042756726da3c7ef515d89212ee1705023d14be389e25fe15611585661b9a20021908b2b80a3c7200a0139dd2b26946606aab0eef9aa7689a6dc2c7eee237fa834");
         nDefaultPort = 44556;
-        nRPCPort = 44555;
+        nRPCPort = 44888;
         strDataDir = "testnet3";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
