@@ -140,8 +140,8 @@ public:
         genesis.nNonce   = 99943;
 
         hashGenesisBlock = genesis.GetHash();
-        cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
-        cout.flush();
+        //cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
+        //cout.flush();
         //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
         assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
 
@@ -220,10 +220,11 @@ block.GetHash = b4b7167f495fcdf4d85368a1789eb58cb4fa161c6fd9fe136a09ad4c65cfc374
     //    genesis.nTime = 1397704779;
       //  genesis.nNonce = 997879;
         hashGenesisBlock = genesis.GetHash();
-        cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
-        cout.flush();
+       // cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
+       // cout.flush();
                 // If genesis block hash does not match, then generate new genesis hash.
-        //if (true && genesis.GetHash() != hashGenesisBlock)
+        
+        if (false && genesis.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
