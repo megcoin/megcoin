@@ -1126,11 +1126,14 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
-    int64_t nSubsidy = 1000000 * COIN;
-
-    if(nHeight < 600000)
+    int64_t nSubsidy = 500000 * COIN;
+    if(nHeight==0) //to prevent having to do genesis again. ugh
     {
-        nSubsidy >>= (nHeight / 100000);
+        nSubsidy*=2; //1M
+    }
+    if(nHeight < 1200000) //~2 years
+    {
+        nSubsidy >>= (nHeight / 200000);
     }
     else
     {
@@ -1161,7 +1164,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnLimit)
     {
-        if(chainActive.Height()+1<100){ //1st few blocks are flexible while the network is shaky
+        if(chainActive.Height()+1<10){ //1st few blocks are flexible while the network is shaky
             // Maximum 400% adjustment...
             bnResult *= 4;
             // ... in best-case exactly 4-times-normal target time
