@@ -1,65 +1,53 @@
-# Megcoin Core [MEG, Ð]
+# Megcoin Core [MEG, ᴍ]
 ==========================
 
-![Megcoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
+![Megcoin](http://i.imgur.com/TqxAuAN.png)
 
-## What is Megcoin? – Such coin
-Megcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix and Litecoin, Megcoin currently employs a simplified variant of scrypt.
+## What is Megcoin?
+Megcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin, Megcoin currently employs a unique variant of scrypt.
 
 http://megcoin.com/
 
-## License – Much license
+## License
 Megcoin is released under the terms of the MIT license. See [COPYING](COPYING)
 for more information or see http://opensource.org/licenses/MIT.
 
-## Development and contributions – omg developers
+## Development and contributions 
 Development is ongoing and the development team as well as other volunteers can freely work in their own trees and submit pull requests when features or bug fixes are ready.
 
-## Very Much Frequently Asked Questions
+## Proof Of Work
+Megcoin uses scrypt as it's proof of work, with a unique N parameter of `123`. To mine it, you must ensure that your miner is capable of mining scrypt-n where the `n` is 123, NOT 2^123. This value was chosen for uniqueness. In this way, even if scrypt-n ASICs came out, they'd be unlikely to support non-power of 2 values of N, so this provides ASIC resistance without using experimental or unfamiliar algorithms. This low value also means that GPUs should be easier to mine with and it should be practical to build FPGAs for this algorithm.
 
-### How much meg can exist? – So many puppies!
-Early 2015 (approximately a year and a half after release) there will be approximately 100,000,000,000 coins.
-Each subsequent block will grant 10,000 coins to encourage miners to continue to secure the network and make up for lost wallets on hard drives/phones/lost encryption passwords/etc.
+## Wallet
+Unlike most altcoin wallets forked from litecoin etc, this has been built by forking from dogecoin-1.7. dogecoin-1.7 is basically a rebase on top of bitcoin 0.9. So, all of the nifty features in bitcoin 0.9 are also in this wallet, including the "core" and cli functionality changes.
 
-### How to get meg? – To the moon!
-Megcoin uses a simplified variant of the scrypt key derivation function as its proof of work with a target time of one minute per block and difficulty readjustment after every block. The block rewards are fixed and halve every 100,000 blocks. Starting with the 600,000th block, a permanent reward of 10,000 Megcoin per block will be paid. 
+## Difficulty
+Difficulty is adjusted each block by the digishield algorithm. This algorithm has been proven to be stable by dogecoin and digitalcoin and allows for extremely fast difficulty adjustments, at the cost of slightly more block time fluctuation
 
-Originally, a different payout scheme was envisioned with block rewards being determined by taking the maximum reward as per the block schedule and applying the result of a Mersenne Twister pseudo-random number generator to arrive at a number between 0 and the maximum reward. This was changed, starting with block 145,000, to prevent large pools from gaming the system and mining only high reward blocks. At the same time, the difficulty retargeting was also changed from four hours to once per block (every minute), implementing an algorithm courtesy of the DigiByte Coin development team, to lessen the impact of sudden increases and decreases of network hashing rate.
+## Frequently Asked Questions
+
+### How much meg can exist?
+Approximately two and a half years after release there will be about 193,750,000,000 coins.
+Each subsequent block will grant 20,000 coins to encourage miners to continue to secure the network and make up for lost wallets on hard drives/phones/lost encryption passwords/etc.
+
+### How to get megged? 
+Megcoin uses a simplified variant of the scrypt key derivation function as its proof of work with a target time of one minute per block and difficulty readjustment after every block. The block rewards are fixed and halve every 200,000 blocks. Starting with the 1,000,000th block, a permanent reward of 20,000 Megcoin per block will be paid. 
 
 The current block reward schedule:
-1–100,000: 0–1,000,000 Megcoin 
+1–200,000: 500K Megcoin 
 
-100,001–145,000: 0–500,000 Megcoin
+200,001–400,000: 250K Megcoin
 
-145,001–200,000: 250,000 Megcoin
+400,001–600,000: 125K Megcoin
 
-200,001–300,000: 125,000 Megcoin
+600,001–800,000: 62500 Megcoin
 
-300,001–400,000: 62,500 Megcoin
+800,001–1,000,000: 31,250 Megcoin
 
-400,001–500,000: 31,250 Megcoin
+1,000,000+: 20,000 Megcoin
 
-500,001–600,000: 15,625 Megcoin
 
-600,000+: 10,000 Megcoin
-
-The original block reward schedule with one-minute block targets and four-hour difficulty readjustment:
-
-1–100,000: 0–1,000,000 Megcoin 
-
-100,001–200,000: 0–500,000 Megcoin
-
-200,001–300,000: 0–250,000 Megcoin
-
-300,001–400,000: 0–125,000 Megcoin
-
-400,001–500,000: 0–62,500 Megcoin
-
-500,001–600,000: 0–31,250 Megcoin
-
-600,000+: 10,000 Megcoin
-
-### Wow plz make megcoind
+### Building megcoin-qt
 
     sudo apt-get install build-essential \
                          libssl-dev \
@@ -68,11 +56,13 @@ The original block reward schedule with one-minute block targets and four-hour d
                          libqrencode-dev \
                          libminiupnpc-dev
 
-    cd src/
+    ./autogen.sh
+    ./configure --with-gui=qt4
+    make USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
     make -f makefile.unix USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
 
-### Such ports
-RPC 22555
-P2P 22556
+### Ports
+RPC 22888
+P2P 22889
 
-![](http://megsay.com/wow//////such/coin)
+
