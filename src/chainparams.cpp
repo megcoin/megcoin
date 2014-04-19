@@ -135,7 +135,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1397704779;
+        genesis.nTime    = 1397887146;
         genesis.nBits    = 0x1e0ffff0;
         genesis.nNonce   = 99943;
 
@@ -145,7 +145,10 @@ public:
         //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
         assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
 
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed2.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed3.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "megcoin1.cloudapp.net"));
 
         // Workaround for Boost not being quite compatible with C++11;
         std::vector<unsigned char> pka = list_of(50); //`M`
@@ -260,7 +263,10 @@ block.GetHash = b4b7167f495fcdf4d85368a1789eb58cb4fa161c6fd9fe136a09ad4c65cfc374
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("testnet.megcoin.com", "testnet.megcoin.org"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed2.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed3.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin.com", "megcoin1.cloudapp.net"));
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         
