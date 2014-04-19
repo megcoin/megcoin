@@ -410,12 +410,12 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation type="unfinished"/>
     </message>
     <message>

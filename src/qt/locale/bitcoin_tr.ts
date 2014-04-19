@@ -404,12 +404,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation>&amp;Gönderme adresleri...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>&amp;Alma adresleri...</translation>
     </message>
     <message>

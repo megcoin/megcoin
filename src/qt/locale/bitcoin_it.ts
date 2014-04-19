@@ -404,12 +404,12 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation>&amp;Indirizzi invianti</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>Indirizzi &amp;riceventi...</translation>
     </message>
     <message>

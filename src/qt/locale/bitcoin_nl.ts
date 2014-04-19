@@ -404,12 +404,12 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation>&amp;Adressen aan het versturen.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>&amp;Adressen aan het ontvangen...</translation>
     </message>
     <message>

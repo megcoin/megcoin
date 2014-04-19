@@ -405,12 +405,12 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation type="unfinished"/>
     </message>
     <message>

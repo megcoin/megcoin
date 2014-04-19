@@ -404,12 +404,12 @@ Tiu ĉi produkto enhavas erojn kreitajn de la &quot;OpenSSL Project&quot; por uz
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation>&amp;Sendaj adresoj...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>&amp;Ricevaj adresoj...</translation>
     </message>
     <message>
