@@ -111,12 +111,12 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>sending addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>receiving addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>

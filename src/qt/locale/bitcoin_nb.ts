@@ -111,12 +111,12 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>sending addresses</source>
         <translation>Utsendingsadresser</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>receiving addresses</source>
         <translation>Mottaksadresser</translation>
     </message>
     <message>

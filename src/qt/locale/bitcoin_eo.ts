@@ -111,12 +111,12 @@ Tiu ĉi produkto enhavas erojn kreitajn de la &quot;OpenSSL Project&quot; por uz
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>sending addresses</source>
         <translation>Sendaj adresoj</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>receiving addresses</source>
         <translation>Ricevaj adresoj</translation>
     </message>
     <message>

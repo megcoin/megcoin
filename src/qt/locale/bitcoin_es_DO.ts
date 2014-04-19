@@ -114,12 +114,12 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>sending addresses</source>
         <translation>Enviando dirección</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>receiving addresses</source>
         <translation>Recibiendo dirección</translation>
     </message>
     <message>

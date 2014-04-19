@@ -119,12 +119,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>sending addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>receiving addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -342,7 +342,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-407"/>
         <source>&amp;Overview</source>
-        <translation>&amp;Wow</translation>
+        <translation>&amp;Megged</translation>
     </message>
     <message>
         <location line="-137"/>
@@ -357,7 +357,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+20"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Many History</translation>
+        <translation>&amp;Meg History</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -483,12 +483,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+146"/>
         <source>&amp;Send</source>
-        <translation>&amp;Pls Send</translation>
+        <translation>&amp;Send Megs</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Receive</source>
-        <translation>&amp;Much Receive</translation>
+        <translation>&amp;Receive Megs</translation>
     </message>
     <message>
         <location line="+46"/>
