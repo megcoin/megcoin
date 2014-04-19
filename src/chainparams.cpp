@@ -142,6 +142,39 @@ public:
         hashGenesisBlock = genesis.GetHash();
         //cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
         //cout.flush();
+
+        // If genesis block hash does not match, then generate new genesis hash.
+        
+        if (false && genesis.GetHash() != hashGenesisBlock)
+        {
+            printf("Searching for genesis block...\n");
+            // This will figure out a valid hash and Nonce if you're
+            // creating a different genesis block:
+            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+            uint256 thash;
+            char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
+
+            while(1)
+            {
+                scrypt_1024_1_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
+                if (thash <= hashTarget)
+                    break;
+                if ((genesis.nNonce & 0xFFF) == 0)
+                {
+                    printf("nonce %08X: hash = %s (target = %s)\n",genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+                }
+                ++genesis.nNonce;
+                if (genesis.nNonce == 0)
+                {
+                    printf("NONCE WRAPPED, incrementing time\n");
+                    ++genesis.nTime;
+                }
+            }
+            printf("genesis.nTime = %u \n",genesis.nTime);
+            printf("block.nNonce = %u \n",genesis.nNonce);
+            printf("block.GetHash = %s\n",genesis.GetHash().ToString().c_str());
+        }
+
         //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
         assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
 
