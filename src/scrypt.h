@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-static const int SCRYPT_SCRATCHPAD_SIZE = 131072 + 63;
+static const int SCRYPT_SCRATCHPAD_SIZE = 15744 + 63; //128*1*N
 
 void scrypt_1024_1_1_256(const char *input, char *output);
 void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad);
