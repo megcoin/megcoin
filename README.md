@@ -1,4 +1,4 @@
-# Megcoin Core [MEG, ᴍ]
+# Megcoin Core [MEG]
 ==========================
 
 ![Megcoin](http://i.imgur.com/TqxAuAN.png)
@@ -59,7 +59,6 @@ The current block reward schedule:
     ./autogen.sh
     ./configure --with-gui=qt4
     make USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
-    make -f makefile.unix USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
 
 ### Ports
 RPC 22888
