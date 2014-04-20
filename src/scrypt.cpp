@@ -276,7 +276,7 @@ void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scrat
 		xor_salsa8(&X[16], &X[0]);
 	}
 	for (i = 0; i < N; i++) {
-		j = 32 * (X[16] & (N-1));
+		j = 32 * (X[16] % N); //change to & N-1 for powers of two
 		for (k = 0; k < 32; k++)
 			X[k] ^= V[j + k];
 		xor_salsa8(&X[0], &X[16]);

@@ -252,20 +252,19 @@ public:
         strDataDir = "testnet3";
 
         /*
-        genesis.nTime = 1397704779 
-block.nNonce = 2281616 
-block.GetHash = b4b7167f495fcdf4d85368a1789eb58cb4fa161c6fd9fe136a09ad4c65cfc374
+genesis.nTime = 1397953531 
+block.nNonce = 3539141 
+block.GetHash = dc2276cb06454c66f71cc104c2916d9d3a1c8494438a250d80e8106d3c6a3a91
+                00000ffff0000000000000000000000000000000000000000000000000000000
 */
-        genesis.nTime = 1397704779;
-        genesis.nNonce = 2281616;
-    //    genesis.nTime = 1397704779;
-      //  genesis.nNonce = 997879;
+        genesis.nTime = 1397953531;
+        genesis.nNonce = 3539141;
         hashGenesisBlock = genesis.GetHash();
        // cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
        // cout.flush();
                 // If genesis block hash does not match, then generate new genesis hash.
         
-        if (false && genesis.GetHash() != hashGenesisBlock)
+        if (false )//&& genesis.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -297,6 +296,7 @@ block.GetHash = b4b7167f495fcdf4d85368a1789eb58cb4fa161c6fd9fe136a09ad4c65cfc374
 
         //genesis.print();
         assert(genesis.GetHash() == hashGenesisBlock);
+        assert(hashGenesisBlock==uint256("dc2276cb06454c66f71cc104c2916d9d3a1c8494438a250d80e8106d3c6a3a91"));
         //assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
 
         vFixedSeeds.clear();
