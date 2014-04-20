@@ -135,22 +135,23 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1397887146;
+        genesis.nTime    = 1397975852;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce = 340016;
+        genesis.nNonce = 717331;
 
         hashGenesisBlock = genesis.GetHash();
         //cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
 
-        /*genesis.nTime = 1397887146 
-block.nNonce = 340016 
-block.GetHash = 9f2f889350c2c23f1c78ddbafe685d3956effc5b94449885c9b50c528d9217d7
+        /*
+genesis.nTime = 1397975852 
+block.nNonce = 717331 
+block.GetHash = 08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9
 */
         //cout.flush();
 
         // If genesis block hash does not match, then generate new genesis hash.
         
-        if (false && genesis.GetHash() != hashGenesisBlock)
+        if (false)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -180,7 +181,7 @@ block.GetHash = 9f2f889350c2c23f1c78ddbafe685d3956effc5b94449885c9b50c528d9217d7
             printf("block.GetHash = %s\n",genesis.GetHash().ToString().c_str());
         }
 
-        assert(hashGenesisBlock == uint256("0x9f2f889350c2c23f1c78ddbafe685d3956effc5b94449885c9b50c528d9217d7"));
+        assert(hashGenesisBlock == uint256("08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9"));
         assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
 
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
