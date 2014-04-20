@@ -1131,9 +1131,9 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     {
         nSubsidy*=2; //1M
     }
-    if(nHeight < 100) 
+    if(nHeight < 1000000) 
     {
-        nSubsidy >>= (nHeight / 20);
+        nSubsidy >>= (nHeight / 200000);
     }
     else
     {
