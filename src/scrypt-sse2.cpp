@@ -122,7 +122,7 @@ void scrypt_1024_1_1_256_sp_sse2(const char *input, char *output, char *scratchp
 		xor_salsa8_sse2(&X.i128[4], &X.i128[0]);
 	}
 	for (i = 0; i < N i++) {
-		j = 8 * (X.u32[16] & (N-1));
+		j = 8 * (X.u32[16] % (N));
 		for (k = 0; k < 8; k++)
 			X.i128[k] = _mm_xor_si128(X.i128[k], V[j + k]);
 		xor_salsa8_sse2(&X.i128[0], &X.i128[4]);
