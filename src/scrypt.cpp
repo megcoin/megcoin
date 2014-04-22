@@ -257,36 +257,37 @@ static inline void xor_salsa8(uint32_t B[16], const uint32_t Bx[16])
 
 void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad)
 {
-	const int N=123;
-	uint8_t B[128];
-	uint32_t X[32];
+	const int N=256;
+	const int R=8;
+	uint8_t B[128*R];
+	uint32_t X[32*R];
 	uint32_t *V;
 	uint32_t i, j, k;
 
 	V = (uint32_t *)(((uintptr_t)(scratchpad) + 63) & ~ (uintptr_t)(63));
 
-	PBKDF2_SHA256((const uint8_t *)input, 80, (const uint8_t *)input, 80, 1, B, 128);
+	PBKDF2_SHA256((const uint8_t *)input, 80, (const uint8_t *)input, 80, 1, B, 128*R);
 
-	for (k = 0; k < 32; k++)
+	for (k = 0; k < 32*R; k++)
 		X[k] = le32dec(&B[4 * k]);
 
 	for (i = 0; i < N; i++) {
-		memcpy(&V[i * 32], X, 128);
-		xor_salsa8(&X[0], &X[16]);
-		xor_salsa8(&X[16], &X[0]);
+		memcpy(&V[i * (32*R)], X, 128*R);
+		xor_salsa8(&X[0], &X[16*R]);
+		xor_salsa8(&X[16*R], &X[0]);
 	}
 	for (i = 0; i < N; i++) {
-		j = 32 * (X[16] % N); //change to & N-1 for powers of two
-		for (k = 0; k < 32; k++)
+		j = 32 * (X[16] & (N-1)); //change to & N-1 for powers of two
+		for (k = 0; k < 32*R; k++)
 			X[k] ^= V[j + k];
-		xor_salsa8(&X[0], &X[16]);
-		xor_salsa8(&X[16], &X[0]);
+		xor_salsa8(&X[0], &X[16*R]);
+		xor_salsa8(&X[16*R], &X[0]);
 	}
 
-	for (k = 0; k < 32; k++)
+	for (k = 0; k < 32*R; k++)
 		le32enc(&B[4 * k], X[k]);
 
-	PBKDF2_SHA256((const uint8_t *)input, 80, B, 128, 1, (uint8_t *)output, 32);
+	PBKDF2_SHA256((const uint8_t *)input, 80, B, 128*R, 1, (uint8_t *)output, 32);
 }
 
 #if defined(USE_SSE2)
