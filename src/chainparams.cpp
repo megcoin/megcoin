@@ -264,13 +264,13 @@ block.GetHash = dc2276cb06454c66f71cc104c2916d9d3a1c8494438a250d80e8106d3c6a3a91
                 00000ffff0000000000000000000000000000000000000000000000000000000
 */
         genesis.nTime = 1397953531;
-        genesis.nNonce = 3769914;
+        genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
        // cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
        // cout.flush();
                 // If genesis block hash does not match, then generate new genesis hash.
         
-        if (false )//&& genesis.GetHash() != hashGenesisBlock)
+        if (true )//&& genesis.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
