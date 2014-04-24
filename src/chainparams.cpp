@@ -264,7 +264,7 @@ block.GetHash = 2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d
        // cout.flush();
                 // If genesis block hash does not match, then generate new genesis hash.
         
-        if (false )//&& genesis.GetHash() != hashGenesisBlock)
+        if (true)//&& genesis.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -275,7 +275,12 @@ block.GetHash = 2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d
 
             while(1)
             {
+                for(int i=0;i<80;i++){
+                    printf("0x%x, ", (uint)UBEGIN(genesis.nVersion)[i]);
+                }
+                printf("\n");
                 scrypt_1024_1_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
+                printf("nonce %08X: hash = %s (target = %s)\n",genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
                 if (thash <= hashTarget)
                     break;
                 if ((genesis.nNonce & 0xFFF) == 0)
