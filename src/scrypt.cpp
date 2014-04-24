@@ -610,8 +610,8 @@ void scrypt_core(const char* input, char* output, char* scratchpad, uint32_t len
 	uint32_t * XY;
 	uint32_t i;
 
-	const uint32_t N = 256;
-	const uint32_t r = 8;
+	const uint32_t N = 8;
+	const uint32_t r = 4;
 	const uint32_t p = 1;
 
 	B = (uint8_t *)(((uintptr_t)(scratchpad) + 63) & ~ (uintptr_t)(63));

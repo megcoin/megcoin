@@ -254,11 +254,11 @@ public:
 
         /*
         genesis.nTime = 1397953531 
-block.nNonce = 4193641 
-block.GetHash = 2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d
+block.nNonce = 4368156 
+block.GetHash = 0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963
 */
         genesis.nTime = 1397953531;
-        genesis.nNonce = 4193641;
+        genesis.nNonce = 4368156;
         hashGenesisBlock = genesis.GetHash();
        // cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
        // cout.flush();
@@ -275,12 +275,7 @@ block.GetHash = 2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d
 
             while(1)
             {
-                for(int i=0;i<80;i++){
-                    printf("0x%x, ", (uint)UBEGIN(genesis.nVersion)[i]);
-                }
-                printf("\n");
                 scrypt_1024_1_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
-                printf("nonce %08X: hash = %s (target = %s)\n",genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
                 if (thash <= hashTarget)
                     break;
                 if ((genesis.nNonce & 0xFFF) == 0)
@@ -303,7 +298,7 @@ block.GetHash = 2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d
         //assert(genesis.GetHash() == hashGenesisBlock);
         //assert(hashGenesisBlock==uint256("dc2276cb06454c66f71cc104c2916d9d3a1c8494438a250d80e8106d3c6a3a91"));
         //assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
-        assert(hashGenesisBlock==uint256("0x2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d"));
+        assert(hashGenesisBlock==uint256("0x0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963"));
         vFixedSeeds.clear();
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
