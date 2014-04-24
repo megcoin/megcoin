@@ -224,8 +224,8 @@ static void smix(uint8_t *, size_t, uint64_t, void *, void *);
 static void
 blkcpy(void * dest, void * src, size_t len)
 {
-	__m128i * D = dest;
-	__m128i * S = src;
+	__m128i * D = (__m128i*)dest;
+	__m128i * S = (__m128i*)src;
 	size_t L = len / 16;
 	size_t i;
 
@@ -236,8 +236,8 @@ blkcpy(void * dest, void * src, size_t len)
 static void
 blkxor(void * dest, void * src, size_t len)
 {
-	__m128i * D = dest;
-	__m128i * S = src;
+	__m128i * D = (__m128i*)dest;
+	__m128i * S = (__m128i*)src;
 	size_t L = len / 16;
 	size_t i;
 
@@ -348,7 +348,7 @@ blockmix_salsa8(__m128i * Bin, __m128i * Bout, __m128i * X, size_t r)
 static uint64_t
 integerify(void * B, size_t r)
 {
-	uint32_t * X = (void *)((uintptr_t)(B) + (2 * r - 1) * 64);
+	uint32_t * X = (uint32_t *)((uintptr_t)(B) + (2 * r - 1) * 64);
 
 	return (((uint64_t)(X[13]) << 32) + X[0]);
 }
@@ -364,10 +364,10 @@ integerify(void * B, size_t r)
 static void
 smix(uint8_t * B, size_t r, uint64_t N, void * V, void * XY)
 {
-	__m128i * X = XY;
-	__m128i * Y = (void *)((uintptr_t)(XY) + 128 * r);
-	__m128i * Z = (void *)((uintptr_t)(XY) + 256 * r);
-	uint32_t * X32 = (void *)X;
+	__m128i * X = (__m128i*)XY;
+	__m128i * Y = (__m128i*)(void *)((uintptr_t)(XY) + 128 * r);
+	__m128i * Z = (__m128i*)(void *)((uintptr_t)(XY) + 256 * r);
+	uint32_t * X32 = (uint32_t *)X;
 	uint64_t i, j;
 	size_t k;
 
@@ -634,7 +634,7 @@ void scrypt_core(const char* input, char* output, char* scratchpad, uint32_t len
 
 void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad)
 {
-	scrypt_core((uint8_t*)input, (uint8_t*)output, scratchpad, 80); 
+	scrypt_core(input, output, scratchpad, 80); 
 }
 
 #if defined(USE_SSE2)
