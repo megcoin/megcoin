@@ -264,7 +264,7 @@ block.GetHash = 2129d7d2fdd5a51995ac23c8d26f43acdb77e7f4b644e1c63581be9fe52b4b0d
        // cout.flush();
                 // If genesis block hash does not match, then generate new genesis hash.
         
-        if (true)//&& genesis.GetHash() != hashGenesisBlock)
+        if (false)//&& genesis.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
