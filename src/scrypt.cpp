@@ -214,6 +214,7 @@ PBKDF2_SHA256(const uint8_t *passwd, size_t passwdlen, const uint8_t *salt,
 
 
 #if defined(__i386__) || defined(__x86_64__)
+
 static void
 blkcpy(void * dest, void * src, size_t len)
 {
