@@ -56,9 +56,6 @@
 #endif
 #endif
 
-#define SCRYPT_SSE
-
-#ifdef SCRYPT_SSE
 
 
 static inline uint32_t be32dec(const void *pp)
@@ -214,13 +211,9 @@ PBKDF2_SHA256(const uint8_t *passwd, size_t passwdlen, const uint8_t *salt,
 	/* Clean PShctx, since we never called _Final on it. */
 	memset(&PShctx, 0, sizeof(HMAC_SHA256_CTX));
 }
-static void blkcpy(void *, void *, size_t);
-static void blkxor(void *, void *, size_t);
-static void salsa20_8(__m128i *);
-static void blockmix_salsa8(__m128i *, __m128i *, __m128i *, size_t);
-static uint64_t integerify(void *, size_t);
-static void smix(uint8_t *, size_t, uint64_t, void *, void *);
 
+
+#if defined(__i386__) || defined(__x86_64__)
 static void
 blkcpy(void * dest, void * src, size_t len)
 {
@@ -424,12 +417,11 @@ smix(uint8_t * B, size_t r, uint64_t N, void * V, void * XY)
 #else
 
 
-
 static void
 blkcpy(void * dest, void * src, size_t len)
 {
-	size_t * D = dest;
-	size_t * S = src;
+	size_t * D = (size_t*)dest;
+	size_t * S = (size_t*)src;
 	size_t L = len / sizeof(size_t);
 	size_t i;
 
@@ -440,8 +432,8 @@ blkcpy(void * dest, void * src, size_t len)
 static void
 blkxor(void * dest, void * src, size_t len)
 {
-	size_t * D = dest;
-	size_t * S = src;
+	size_t * D = (size_t*)dest;
+	size_t * S = (size_t*)src;
 	size_t L = len / sizeof(size_t);
 	size_t i;
 
@@ -534,7 +526,7 @@ blockmix_salsa8(uint32_t * Bin, uint32_t * Bout, uint32_t * X, size_t r)
 static uint64_t
 integerify(void * B, size_t r)
 {
-	uint32_t * X = (void *)((uintptr_t)(B) + (2 * r - 1) * 64);
+	uint32_t * X = (uint32_t *)((uintptr_t)(B) + (2 * r - 1) * 64);
 
 	return (((uint64_t)(X[1]) << 32) + X[0]);
 }
