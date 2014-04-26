@@ -29,6 +29,10 @@
 
  // Copyright (c) 2013-2014 Megcoin Developers
 
+#if defined(__SSE2__) || defined(__x86_64__)
+#define USE_SSE_SCRYPT
+#endif
+
 #include "scrypt.h"
 #include "util.h"
 #include <stdlib.h>
@@ -36,16 +40,16 @@
 #include <string.h>
 #include <openssl/sha.h>
 
-#include <sys/types.h>
-#include <sys/mman.h>
-
-#include <emmintrin.h>
 #include <errno.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 
-
+#ifdef USE_SSE_SCRYPT
+#include <sys/types.h>
+#include <emmintrin.h>
+#endif
+ 
 #if defined(USE_SSE2) && !defined(USE_SSE2_ALWAYS)
 #ifdef _MSC_VER
 // MSVC 64bit is unable to use inline asm
@@ -213,7 +217,7 @@ PBKDF2_SHA256(const uint8_t *passwd, size_t passwdlen, const uint8_t *salt,
 }
 
 
-#if defined(__i386__) || defined(__x86_64__)
+#ifdef USE_SSE_SCRYPT
 
 static void
 blkcpy(void * dest, void * src, size_t len)
@@ -636,6 +640,7 @@ void (*scrypt_1024_1_1_256_sp_detected)(const char *input, char *output, char *s
 
 void scrypt_detect_sse2()
 {
+	//TODO make this actually work. meh
 #if defined(USE_SSE2_ALWAYS)
     printf("scrypt: using scrypt-sse2 as built.\n");
 #else // USE_SSE2_ALWAYS
