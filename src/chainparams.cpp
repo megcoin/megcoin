@@ -110,7 +110,7 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xc0;
         //currently just invalid pubkey
-        vAlertPubKey = ParseHex("0554da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
+        vAlertPubKey = ParseHex("0000000000ae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         nDefaultPort = 22889;
         nRPCPort = 22888;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
@@ -124,20 +124,20 @@ public:
         //     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
         //     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
         //   vMerkleTree: 4a5e1e
-        const char* pszTimestamp = "megan griffin";
+        const char* pszTimestamp = "Toronto Mayor Rob Ford take break from campaign to seek help for alcohol abuse http://www.cnn.com/2014/04/30/world/americas/mayor-rob-ford/";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 88 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0000000000a689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1397975852;
+        genesis.nTime    = 1398916743;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce = 717331;
+        genesis.nNonce = 0;
 
         hashGenesisBlock = genesis.GetHash();
         //cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
@@ -151,7 +151,7 @@ block.GetHash = 08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9
 
         // If genesis block hash does not match, then generate new genesis hash.
         
-        if (false)
+        if (true)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -177,12 +177,14 @@ block.GetHash = 08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9
                 }
             }
             printf("genesis.nTime = %u \n",genesis.nTime);
-            printf("block.nNonce = %u \n",genesis.nNonce);
-            printf("block.GetHash = %s\n",genesis.GetHash().ToString().c_str());
+            printf("genesis.nNonce = %u \n",genesis.nNonce);
+            printf("genesis.hashMerkleRoot = %s\n",genesis.hashMerkleRoot.ToString().c_str());
+            printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
+            exit(1);
         }
 
-        assert(hashGenesisBlock == uint256("08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9"));
-        assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
+        //assert(hashGenesisBlock == uint256("08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9"));
+        //assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
 
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed2.megcoin.com"));
@@ -264,7 +266,7 @@ block.GetHash = 0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963
        // cout.flush();
                 // If genesis block hash does not match, then generate new genesis hash.
         
-        if (false)//&& genesis.GetHash() != hashGenesisBlock)
+        if (true)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -290,15 +292,14 @@ block.GetHash = 0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963
                 }
             }
             printf("genesis.nTime = %u \n",genesis.nTime);
-            printf("block.nNonce = %u \n",genesis.nNonce);
-            printf("block.GetHash = %s\n",genesis.GetHash().ToString().c_str());
+            printf("genesis.nNonce = %u \n",genesis.nNonce);
+            printf("genesis.hashMerkleRoot = %s\n",genesis.hashMerkleRoot.ToString().c_str());
+            printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
+            exit(1);
         }
 
         //genesis.print();
-        //assert(genesis.GetHash() == hashGenesisBlock);
-        //assert(hashGenesisBlock==uint256("dc2276cb06454c66f71cc104c2916d9d3a1c8494438a250d80e8106d3c6a3a91"));
-        //assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
-        assert(hashGenesisBlock==uint256("0x0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963"));
+        //assert(hashGenesisBlock==uint256("0x0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963"));
         vFixedSeeds.clear();
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
