@@ -12,11 +12,15 @@ http://megcoin.com/
 Megcoin is released under the terms of the MIT license. See [COPYING](COPYING)
 for more information or see http://opensource.org/licenses/MIT.
 
+Nearly everywhere it says "Megcoin developers" in the copyright should really say "Dogecoin developers". I did a global rename and some things like that unintentionally was done. 
+
 ## Development and contributions 
 Development is ongoing and the development team as well as other volunteers can freely work in their own trees and submit pull requests when features or bug fixes are ready.
 
 ## Proof Of Work
-Megcoin uses scrypt as it's proof of work, with a unique N parameter of `123`. To mine it, you must ensure that your miner is capable of mining scrypt-n where the `n` is 123, NOT 2^123. This value was chosen for uniqueness. In this way, even if scrypt-n ASICs came out, they'd be unlikely to support non-power of 2 values of N, so this provides ASIC resistance without using experimental or unfamiliar algorithms. This low value also means that GPUs should be easier to mine with and it should be practical to build FPGAs for this algorithm.
+Megcoin uses scrypt as it's proof of work. However, unlike most scrypt variants, megcoin uses an R value that is not a value of 1. I call this variant scrypt-8-4 or scrypt-n-r. To mine it, you must ensure that your miner is capable of mining scrypt where the `n` is 8 and the `r` parameter is 4. This value was chosen for uniqueness. In this way, even if scrypt-n ASICs came out, they'd be unlikely to support values of R that aren't 1, so this provides ASIC resistance without using experimental or unfamiliar algorithms. The significant payout period is also too short for an ASIC to be worth the time and investment of this algorithm. 
+
+The low values of R and N also means that GPUs should be easier to mine with and it should be practical to build FPGAs for this algorithm. Approximate memory usage can be calculated as `128*R*N`, so the overall memory usage of this algorithm should just be a bit more than 4Kbytes. 
 
 ## Wallet
 Unlike most altcoin wallets forked from litecoin etc, this has been built by forking from dogecoin-1.7. dogecoin-1.7 is basically a rebase on top of bitcoin 0.9. So, all of the nifty features in bitcoin 0.9 are also in this wallet, including the "core" and cli functionality changes.
@@ -47,7 +51,7 @@ The current block reward schedule:
 1,000,000+: 20,000 Megcoin
 
 
-### Building megcoin-qt
+### Building megcoin-qt on Linux
 
     sudo apt-get install build-essential \
                          libssl-dev \
@@ -55,13 +59,19 @@ The current block reward schedule:
                          libboost-all-dev \
                          libqrencode-dev \
                          libminiupnpc-dev
+                         libqt5-dev
 
     ./autogen.sh
-    ./configure --with-gui=qt4
+    ./configure --with-gui=qt5
     make USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
+
+Optionally, you can use `--with-gui=qt4`. This will build three files:
+
+* megcoind -- The daemon
+* megcoin-cli -- the RPC client which issues calls to the daemon
+* megcoin-qt -- the all-in-one graphical wallet 
+
 
 ### Ports
 RPC 22888
 P2P 22889
-
-
