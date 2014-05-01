@@ -427,7 +427,7 @@ public:
     uint256 GetPoWHash() const
     {
         uint256 thash;
-        scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
+        scrypt_8_4_1_256(BEGIN(nVersion), BEGIN(thash));
         return thash;
     }
 

@@ -5,24 +5,24 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-static const int SCRYPT_SCRATCHPAD_SIZE = 1024*128*4; //128*R*N
+static const int SCRYPT_SCRATCHPAD_SIZE = 128*8*4 + (128*4) + (256*4) + 64 + 64; //128*N*R + (128*R)+(256*R)+64+64
 
-void scrypt_1024_1_1_256(const char *input, char *output);
-void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad);
+void scrypt_8_4_1_256(const char *input, char *output);
+void scrypt_8_4_1_256_sp_generic(const char *input, char *output, char *scratchpad);
 
 #if defined(USE_SSE2)
 #if defined(_M_X64) || defined(__x86_64__) || defined(_M_AMD64) || (defined(MAC_OSX) && defined(__i386__))
 #define USE_SSE2_ALWAYS 1
-#define scrypt_1024_1_1_256_sp(input, output, scratchpad) scrypt_1024_1_1_256_sp_sse2((input), (output), (scratchpad))
+#define scrypt_8_4_1_256_sp(input, output, scratchpad) scrypt_8_4_1_256_sp_sse2((input), (output), (scratchpad))
 #else
-#define scrypt_1024_1_1_256_sp(input, output, scratchpad) scrypt_1024_1_1_256_sp_detected((input), (output), (scratchpad))
+#define scrypt_8_4_1_256_sp(input, output, scratchpad) scrypt_8_4_1_256_sp_detected((input), (output), (scratchpad))
 #endif
 
 void scrypt_detect_sse2();
-void scrypt_1024_1_1_256_sp_sse2(const char *input, char *output, char *scratchpad);
-extern void (*scrypt_1024_1_1_256_sp_detected)(const char *input, char *output, char *scratchpad);
+void scrypt_8_4_1_256_sp_sse2(const char *input, char *output, char *scratchpad);
+extern void (*scrypt_8_4_1_256_sp_detected)(const char *input, char *output, char *scratchpad);
 #else
-#define scrypt_1024_1_1_256_sp(input, output, scratchpad) scrypt_1024_1_1_256_sp_generic((input), (output), (scratchpad))
+#define scrypt_8_4_1_256_sp(input, output, scratchpad) scrypt_8_4_1_256_sp_generic((input), (output), (scratchpad))
 #endif
 
 void

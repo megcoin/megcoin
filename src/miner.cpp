@@ -563,7 +563,7 @@ void static MegcoinMiner(CWallet *pwallet)
             while (true)
             {
 
-                scrypt_1024_1_1_256_sp(BEGIN(pblock->nVersion), BEGIN(thash), scratchpad);
+                scrypt_8_4_1_256_sp(BEGIN(pblock->nVersion), BEGIN(thash), scratchpad);
 
                 if (thash <= hashTarget)
                 {

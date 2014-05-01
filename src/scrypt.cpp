@@ -625,14 +625,14 @@ void scrypt_core(const char* input, char* output, char* scratchpad, uint32_t len
 }
 
 
-void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad)
+void scrypt_8_4_1_256_sp_generic(const char *input, char *output, char *scratchpad)
 {
 	scrypt_core(input, output, scratchpad, 80); 
 }
 
 #if defined(USE_SSE2)
 // By default, set to generic scrypt function. This will prevent crash in case when scrypt_detect_sse2() wasn't called
-void (*scrypt_1024_1_1_256_sp_detected)(const char *input, char *output, char *scratchpad) = &scrypt_1024_1_1_256_sp_generic;
+void (*scrypt_8_4_1_256_sp_detected)(const char *input, char *output, char *scratchpad) = &scrypt_8_4_1_256_sp_generic;
 
 void scrypt_detect_sse2()
 {
@@ -654,20 +654,20 @@ void scrypt_detect_sse2()
 
     if (cpuid_edx & 1<<26)
     {
-        //scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_sse2;
+        //scrypt_8_4_1_256_sp_detected = &scrypt_8_4_1_256_sp_sse2;
         printf("scrypt: using scrypt-sse2 as detected.\n");
     }
     else
     {
-        scrypt_1024_1_1_256_sp_detected = &scrypt_1024_1_1_256_sp_generic;
+        scrypt_8_4_1_256_sp_detected = &scrypt_8_4_1_256_sp_generic;
         printf("scrypt: using scrypt-generic, SSE2 unavailable.\n");
     }
 #endif // USE_SSE2_ALWAYS
 }
 #endif
 
-void scrypt_1024_1_1_256(const char *input, char *output)
+void scrypt_8_4_1_256(const char *input, char *output)
 {
 	char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
-    scrypt_1024_1_1_256_sp(input, output, scratchpad);
+    scrypt_8_4_1_256_sp(input, output, scratchpad);
 }

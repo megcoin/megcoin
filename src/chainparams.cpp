@@ -118,12 +118,6 @@ public:
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
-        //
-        // CBlock(hash=000000000019d6, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=4a5e1e, nTime=1231006505, nBits=1d00ffff, nNonce=2083236893, vtx=1)
-        //   CTransaction(hash=4a5e1e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-        //     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
-        //     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
-        //   vMerkleTree: 4a5e1e
         const char* pszTimestamp = "Toronto Mayor Rob Ford take break from campaign to seek help for alcohol abuse http://www.cnn.com/2014/04/30/world/americas/mayor-rob-ford/";
         CTransaction txNew;
         txNew.vin.resize(1);
@@ -162,7 +156,7 @@ block.GetHash = 08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9
 
             while(1)
             {
-                scrypt_1024_1_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
+                scrypt_8_4_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
                 if (thash <= hashTarget)
                     break;
                 if ((genesis.nNonce & 0xFFF) == 0)
@@ -277,7 +271,7 @@ block.GetHash = 0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963
 
             while(1)
             {
-                scrypt_1024_1_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
+                scrypt_8_4_1_256_sp(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
                 if (thash <= hashTarget)
                     break;
                 if ((genesis.nNonce & 0xFFF) == 0)
