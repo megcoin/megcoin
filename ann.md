@@ -2,7 +2,7 @@
 
 # [Megcoin - Get Megged [MEG]](http://megcoin.com)
 
-[img]()
+[img](http://i.imgur.com/TqxAuAN.png)
 
 ## Specifications:
 
@@ -11,7 +11,7 @@
 * Total: infinite (20K final block reward)
 * Block time: one minute
 * Reward halved: every 200,000 blocks
-* Reward ripen: 120 blocks (~2 hours)
+* Rewards mature: 120 blocks (~2 hours)
 * Difficulty adjustment: Every block, digishield
 * Wallet forked from Dogecoin 1.7/Bitcoin 0.9
 
@@ -44,8 +44,7 @@ Because it was forked from Dogecoin 1.7, which is forked from Bitcoin 0.9, Megco
 ## Downloads
 
 * [Windows (32bit)](http://megcoin.com/wallet1.7/windows)
-* [Arch Linux(pkgbuild)](http://megcoin.com/wallet1.7/ff)
-* [Mac OSX](http://megcoin.com/wallet1.7/windows)
+* Mac OSX coming soon
 
 The source code is available on [github](https://github.com/Megcoin/megcoin)
 
@@ -60,18 +59,18 @@ The source code is available on [github](https://github.com/Megcoin/megcoin)
 
 ## Mining
 
-* [cpuminer](https://bitbucket.org/earlz/megcpuminer)
+* [cpuminer](https://bitbucket.org/earlz/megcpuminer) for mining with pools
 * The wallet supports mining by using `setgenerate true -1`
 
 This should be very easily (and effeciently) mined by GPUs and even FPGAs due to it's low 4Kbyte memory requirement. I do not have the knowledge to port a GPU miner though, so this is why I've only ported cpuminer.
 
 ## Pools
 
-* [megpool.earlz.net](http://megpool.earlz.net)
+* [megpool.earlz.net](http://megpool.earlz.net:8080)
 
 **Note:** megpool.earlz.net is only for bootstrapping the coin and allowing easy initial mining. To encourage pool diversity, it has a schedule:
 
-* Day 1-2: 0% fees
+* Day 1-2: 0.5% fees
 * day 3-5: 2% fees
 * day 6-7: 5% fees
 * day 8-13: 8% fees
@@ -84,8 +83,18 @@ The first pool to be setup and reported to me will be rewarded with 1M MEG.
 
 ## Nodes
 
-I've tried to ensure there are plenty of servers for the initial rush of wallet syncs including nodes in the US, Europe, and China. However if you have a reliable node, report it to me and I'll add it to this list in case those servers get overloaded or are later scaled down for cost reasons. 
+I've tried to ensure there are plenty of servers for the initial rush of wallet syncs including nodes in the US, Europe, and China. However if you have a reliable node, report it to me and I'll add it to this list in case those servers get overloaded or are later scaled down for cost reasons. No addnode arguments should be required right now.
 
 ## Exchanges
 
 None yet, but soon! 
+
+## Bounties
+
+This will be updated as I mine coins (since I didn't premine any)
+
+The biggest item on the list is GPU miners for both Nvidia and AMD
+
+## Testnet
+
+Also, if you would like to test services or mining with Megcoin, I have testnet nodes running so syncing should be trivial
