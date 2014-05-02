@@ -111,6 +111,7 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xc0;
         //currently just invalid pubkey
+        //vAlertPubKey = ParseHex("0554da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         vAlertPubKey = ParseHex("0000000000ae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         nDefaultPort = 22889;
         nRPCPort = 22888;
@@ -119,34 +120,35 @@ public:
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
-        const char* pszTimestamp = "May 1st 2014 White House raises concerns about data discrimination http://www.usatoday.com/story/news/nation/2014/05/01/white-house-big-data-discrimination/8566493/";
+        //NOTE: there is a size limit of some amount here!
+        //sha256("White House raises concerns about data discrimination http://www.usatoday.com/story/news/nation/2014/05/01/white-house-big-data-discrimination/8566493/")
+        const char* pszTimestamp = "ed647874f2ddc1b8a3847a434036de602c88c0bf8d477ec84831772b0bed27f6";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 88 * COIN;
+        //txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("0000000000a689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1398994530;
+        genesis.nTime = 1398994530;
+        genesis.nNonce = 149207;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce = 0;
+
+/*
+genesis.nTime = 1398994530 
+genesis.nNonce = 149207 
+genesis.hashMerkleRoot = 97973c6661923c8468dd7010d56d0a69720ff67b3463176a0d9355a2074d2fe0
+genesis.GetHash = c3ed2d3a411a3937070ec69ec8eb3d0c60a2d76387931251cdc8cd0fad656246
+*/
 
         hashGenesisBlock = genesis.GetHash();
-        //cout << "genesis: " <<  genesis.hashMerkleRoot.ToString() << endl;
-
-        /*
-genesis.nTime = 1397975852 
-block.nNonce = 717331 
-block.GetHash = 08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9
-*/
-        //cout.flush();
-
         // If genesis block hash does not match, then generate new genesis hash.
         
-        if (true)
+        if (false)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -178,9 +180,8 @@ block.GetHash = 08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9
             exit(1);
         }
 
-        //assert(hashGenesisBlock == uint256("08273e261bbae396ec73f17bf4dc8064092f9cc956dfb3f0fadf23a55c737bd9"));
-        //assert(genesis.hashMerkleRoot == uint256("0x053e8b70d0760500c257a1622913f59a1bdc3c8304a5b420bdb9f33806e30087"));
-
+        //assert(hashGenesisBlock == uint256("0xa53fcbe355303f5dd632d1538578d768530cdc89526ca9af8e0dfd0bc589dd57"));
+        //assert(genesis.hashMerkleRoot == uint256("0x02e16356b6640d421df59287b4652c9cb689f73683faa4fcedf53d31ee1a2d09"));
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed2.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("megcoin.com", "seed3.megcoin.com"));
@@ -244,19 +245,24 @@ public:
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
-        vAlertPubKey = ParseHex("042756726da3c7ef515d89212ee1705023d14be389e25fe15611585661b9a20021908b2b80a3c7200a0139dd2b26946606aab0eef9aa7689a6dc2c7eee237fa834");
+        vAlertPubKey = ParseHex("0000000000a3c7ef515d89212ee1705023d14be389e25fe15611585661b9a20021908b2b80a3c7200a0139dd2b26946606aab0eef9aa7689a6dc2c7eee237fa834");
         nDefaultPort = 44889;
         nRPCPort = 44888;
         strDataDir = "testnet3";
-        
+
         //genesis.nTime = 397953531;
-        genesis.nNonce = 4368156;
+        genesis.nTime = 1398994500;
+        genesis.nNonce = 2458840;
         hashGenesisBlock = genesis.GetHash();
-       // cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
-       // cout.flush();
-                // If genesis block hash does not match, then generate new genesis hash.
+        // If genesis block hash does not match, then generate new genesis hash.
         
-        if (true)
+        /*
+        genesis.nTime = 1398994500 
+genesis.nNonce = 2458840 
+genesis.hashMerkleRoot = 02e16356b6640d421df59287b4652c9cb689f73683faa4fcedf53d31ee1a2d09
+genesis.GetHash = d8d9f46f11bab0d3a3f94655ac9dfde07239a6621eb8737e773005adbc46b1f1
+        */
+        if (false)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
