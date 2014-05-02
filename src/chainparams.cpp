@@ -111,7 +111,6 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xc0;
         //currently just invalid pubkey
-        //vAlertPubKey = ParseHex("0554da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         vAlertPubKey = ParseHex("0000000000ae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         nDefaultPort = 22889;
         nRPCPort = 22888;
@@ -128,7 +127,6 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 88 * COIN;
-        //txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("0000000000a689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
@@ -179,13 +177,14 @@ genesis.GetHash = c3ed2d3a411a3937070ec69ec8eb3d0c60a2d76387931251cdc8cd0fad6562
             printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
             exit(1);
         }
-
-        //assert(hashGenesisBlock == uint256("0xa53fcbe355303f5dd632d1538578d768530cdc89526ca9af8e0dfd0bc589dd57"));
+        assert(hashGenesisBlock== uint256("0xc3ed2d3a411a3937070ec69ec8eb3d0c60a2d76387931251cdc8cd0fad656246"));
         //assert(genesis.hashMerkleRoot == uint256("0x02e16356b6640d421df59287b4652c9cb689f73683faa4fcedf53d31ee1a2d09"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed2.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed3.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "megcoin1.cloudapp.net"));
+        //use plenty of different domains to ensure if one goes down it will still work
+        vSeeds.push_back(CDNSSeedData("seed1.megcoin.com", "seed1.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed2.megcoin.com", "seed2.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed3.megcoin.com", "seed3.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net"));
+        vSeeds.push_back(CDNSSeedData("megseed.earlz.net", "megseed.earlz.net"));
 
         // Workaround for Boost not being quite compatible with C++11;
         std::vector<unsigned char> pka = list_of(50); //`M`
@@ -250,18 +249,16 @@ public:
         nRPCPort = 44888;
         strDataDir = "testnet3";
 
-        //genesis.nTime = 397953531;
         genesis.nTime = 1398994500;
-        genesis.nNonce = 2458840;
+        genesis.nNonce = 3141925;
         hashGenesisBlock = genesis.GetHash();
         // If genesis block hash does not match, then generate new genesis hash.
-        
-        /*
-        genesis.nTime = 1398994500 
-genesis.nNonce = 2458840 
-genesis.hashMerkleRoot = 02e16356b6640d421df59287b4652c9cb689f73683faa4fcedf53d31ee1a2d09
-genesis.GetHash = d8d9f46f11bab0d3a3f94655ac9dfde07239a6621eb8737e773005adbc46b1f1
-        */
+/*
+genesis.nTime = 1398994500 
+genesis.nNonce = 3141925 
+genesis.hashMerkleRoot = 97973c6661923c8468dd7010d56d0a69720ff67b3463176a0d9355a2074d2fe0
+genesis.GetHash = 8188f2a94596439b0d4659ef56f2aa92976d9aeeaf5031d62ebffab9ecddf131
+*/
         if (false)
         {
             printf("Searching for genesis block...\n");
@@ -294,14 +291,15 @@ genesis.GetHash = d8d9f46f11bab0d3a3f94655ac9dfde07239a6621eb8737e773005adbc46b1
             exit(1);
         }
 
-        //genesis.print();
-        //assert(hashGenesisBlock==uint256("0x0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963"));
+        assert(hashGenesisBlock == uint256("0x8188f2a94596439b0d4659ef56f2aa92976d9aeeaf5031d62ebffab9ecddf131"));
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed1.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed2.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "seed3.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin.com", "megcoin1.cloudapp.net"));
+        //use plenty of different domains to ensure if one goes down it will still work
+        vSeeds.push_back(CDNSSeedData("seed1.megcoin.com", "seed1.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed2.megcoin.com", "seed2.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed3.megcoin.com", "seed3.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net"));
+        vSeeds.push_back(CDNSSeedData("megseed.earlz.net", "megseed.earlz.net"));
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         
