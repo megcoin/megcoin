@@ -119,7 +119,7 @@ public:
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
-        const char* pszTimestamp = "Toronto Mayor Rob Ford take break from campaign to seek help for alcohol abuse http://www.cnn.com/2014/04/30/world/americas/mayor-rob-ford/";
+        const char* pszTimestamp = "May 1st 2014 White House raises concerns about data discrimination http://www.usatoday.com/story/news/nation/2014/05/01/white-house-big-data-discrimination/8566493/";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -130,7 +130,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1398916743;
+        genesis.nTime    = 1398994530;
         genesis.nBits    = 0x1e0ffff0;
         genesis.nNonce = 0;
 
@@ -248,13 +248,8 @@ public:
         nDefaultPort = 44889;
         nRPCPort = 44888;
         strDataDir = "testnet3";
-
-        /*
-        genesis.nTime = 1397953531 
-block.nNonce = 4368156 
-block.GetHash = 0f3836a561658db1aa38ff7d89edbab2edaae8caf76e75316277b48fd9980963
-*/
-        genesis.nTime = 1397953531;
+        
+        //genesis.nTime = 397953531;
         genesis.nNonce = 4368156;
         hashGenesisBlock = genesis.GetHash();
        // cout << "genesis: " <<  hashGenesisBlock.ToString() << endl;
