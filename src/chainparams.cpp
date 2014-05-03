@@ -120,8 +120,8 @@ public:
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
         //NOTE: there is a size limit of some amount here!
-        //sha256("White House raises concerns about data discrimination http://www.usatoday.com/story/news/nation/2014/05/01/white-house-big-data-discrimination/8566493/")
-        const char* pszTimestamp = "ed647874f2ddc1b8a3847a434036de602c88c0bf8d477ec84831772b0bed27f6";
+        //sha256("Obama, Merkel still struggle over spying but agree on trade http://www.reuters.com/article/2014/05/03/us-obama-merkel-idUSBREA410VV20140503")
+        const char* pszTimestamp = "e01bd5541df3a89676b093419ec483312d23c1e86f1aa246d28204cc5ca3dfdb";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -132,15 +132,16 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1398994530;
-        genesis.nNonce = 149207;
+        genesis.nTime = 1399088431;
+        genesis.nNonce = 751238;
         genesis.nBits    = 0x1e0ffff0;
 
 /*
-genesis.nTime = 1398994530 
-genesis.nNonce = 149207 
-genesis.hashMerkleRoot = 97973c6661923c8468dd7010d56d0a69720ff67b3463176a0d9355a2074d2fe0
-genesis.GetHash = c3ed2d3a411a3937070ec69ec8eb3d0c60a2d76387931251cdc8cd0fad656246
+genesis.nTime = 1399088431 
+genesis.nNonce = 751238 
+genesis.hashMerkleRoot = f1c343ad330f75ca4bad0205acd909614f2b6548452ef5787180bbb5d2e03d50
+genesis.GetHash = d7b86348244577709049bdc782e08bb4f43b763ad3bca6c8212efc88fb8be9d3
+
 */
 
         hashGenesisBlock = genesis.GetHash();
@@ -177,8 +178,8 @@ genesis.GetHash = c3ed2d3a411a3937070ec69ec8eb3d0c60a2d76387931251cdc8cd0fad6562
             printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
             exit(1);
         }
-        assert(hashGenesisBlock== uint256("0xc3ed2d3a411a3937070ec69ec8eb3d0c60a2d76387931251cdc8cd0fad656246"));
-        //assert(genesis.hashMerkleRoot == uint256("0x02e16356b6640d421df59287b4652c9cb689f73683faa4fcedf53d31ee1a2d09"));
+        assert(hashGenesisBlock == uint256("0xd7b86348244577709049bdc782e08bb4f43b763ad3bca6c8212efc88fb8be9d3"));
+        assert(genesis.hashMerkleRoot == uint256("0xf1c343ad330f75ca4bad0205acd909614f2b6548452ef5787180bbb5d2e03d50"));
         //use plenty of different domains to ensure if one goes down it will still work
         vSeeds.push_back(CDNSSeedData("seed1.megcoin.com", "seed1.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed2.megcoin.com", "seed2.megcoin.com"));
@@ -249,15 +250,16 @@ public:
         nRPCPort = 44888;
         strDataDir = "testnet3";
 
-        genesis.nTime = 1398994500;
-        genesis.nNonce = 3141925;
+        genesis.nTime = 1399088430;
+        genesis.nNonce = 90053;
         hashGenesisBlock = genesis.GetHash();
         // If genesis block hash does not match, then generate new genesis hash.
 /*
-genesis.nTime = 1398994500 
-genesis.nNonce = 3141925 
-genesis.hashMerkleRoot = 97973c6661923c8468dd7010d56d0a69720ff67b3463176a0d9355a2074d2fe0
-genesis.GetHash = 8188f2a94596439b0d4659ef56f2aa92976d9aeeaf5031d62ebffab9ecddf131
+genesis.nTime = 1399088430 
+genesis.nNonce = 90053 
+genesis.hashMerkleRoot = f1c343ad330f75ca4bad0205acd909614f2b6548452ef5787180bbb5d2e03d50
+genesis.GetHash = 5698e383a91f59b92cbcfeff45d9c368645bacf52737f9a51491d7ec025dc02a
+
 */
         if (false)
         {
@@ -291,13 +293,14 @@ genesis.GetHash = 8188f2a94596439b0d4659ef56f2aa92976d9aeeaf5031d62ebffab9ecddf1
             exit(1);
         }
 
-        assert(hashGenesisBlock == uint256("0x8188f2a94596439b0d4659ef56f2aa92976d9aeeaf5031d62ebffab9ecddf131"));
+        assert(hashGenesisBlock == uint256("0x5698e383a91f59b92cbcfeff45d9c368645bacf52737f9a51491d7ec025dc02a"));
         vFixedSeeds.clear();
         vSeeds.clear();
         //use plenty of different domains to ensure if one goes down it will still work
         vSeeds.push_back(CDNSSeedData("seed1.megcoin.com", "seed1.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed2.megcoin.com", "seed2.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed3.megcoin.com", "seed3.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("testnet.megcoin.com", "testnet.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net"));
         vSeeds.push_back(CDNSSeedData("megseed.earlz.net", "megseed.earlz.net"));
 
