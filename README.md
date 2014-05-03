@@ -12,8 +12,6 @@ http://megcoin.com/
 Megcoin is released under the terms of the MIT license. See [COPYING](COPYING)
 for more information or see http://opensource.org/licenses/MIT.
 
-Nearly everywhere it says "Megcoin developers" in the copyright should really say "Dogecoin developers". I did a global rename and some things like that unintentionally was done. 
-
 ## Development and contributions 
 Development is ongoing and the development team as well as other volunteers can freely work in their own trees and submit pull requests when features or bug fixes are ready.
 

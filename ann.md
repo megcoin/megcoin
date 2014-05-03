@@ -7,7 +7,7 @@
 ## Specifications:
 
 * PoW Algo: Scrypt-8-4 (scrypt-n-r)
-* Premine: 0%.  
+* Premine: 0%
 * Total: infinite (20K final block reward)
 * Block time: one minute
 * Reward halved: every 200,000 blocks
@@ -43,9 +43,8 @@ Because it was forked from Dogecoin 1.7, which is forked from Bitcoin 0.9, Megco
 
 ## Downloads
 
-* [Windows (32bit)](http://megcoin.com/wallet1.7/windows)
-* Mac OSX coming soon
-
+* [Windows (32bit)](http://earlz.net/static/megcoin1.0win32.zip)
+* [Mac OSX](http://earlz.net/static/megcoin1.0mac.zip)
 The source code is available on [github](https://github.com/Megcoin/megcoin)
 
 ## Resources
@@ -66,24 +65,13 @@ This should be very easily (and effeciently) mined by GPUs and even FPGAs due to
 
 ## Pools
 
-* [megpool.earlz.net](http://megpool.earlz.net:8080)
+I'm running a [semi-private pool](http://megpool.earlz.net:8080) (because I don't have the expertise to run a pool reliably) that you can join into if you want. However, right now I recommend setting up p2pools or solomining because like I said, I am not an expert pool runner and I'd hate to lose people's coins
 
-**Note:** megpool.earlz.net is only for bootstrapping the coin and allowing easy initial mining. To encourage pool diversity, it has a schedule:
-
-* Day 1-2: 0.5% fees
-* day 3-5: 2% fees
-* day 6-7: 5% fees
-* day 8-13: 8% fees
-* day  14+: 10% fees 
-
-After day 14, the fees will remain very high until megpool.earlz.net is less than 30% of the network hashrate. 
-Setting up a pool is very easy with NOMP (if you're not afraid of prerelease software). NOMP has out of the box support for Megcoin and is very easy to setup. 
-
-The first pool to be setup and reported to me will be rewarded with 1M MEG.
+Pools will be listed here as they are made. 
 
 ## Nodes
 
-I've tried to ensure there are plenty of servers for the initial rush of wallet syncs including nodes in the US, Europe, and China. However if you have a reliable node, report it to me and I'll add it to this list in case those servers get overloaded or are later scaled down for cost reasons. No addnode arguments should be required right now.
+I've tried to ensure there are plenty of servers for the initial rush of wallet syncs including nodes in the US, Europe, and Japan. However if you have a reliable node, report it to me and I'll add it to this list in case those servers get overloaded or are later scaled down for cost reasons. No addnode arguments should be required right now.
 
 ## Exchanges
 
