@@ -44,8 +44,9 @@ Because it was forked from Dogecoin 1.7, which is forked from Bitcoin 0.9, Megco
 ## Downloads
 
 * [Windows (32bit)](http://earlz.net/static/megcoin1.0win32.zip)
-* [Mac OSX](http://earlz.net/static/megcoin1.0mac.zip)
-The source code is available on [github](https://github.com/Megcoin/megcoin)
+* Mac OSX wallet coming soon 
+
+The source code is available on [github](https://github.com/Megcoin/megcoin) for compiling on Linux and elsewhere
 
 ## Resources
 
@@ -54,7 +55,7 @@ The source code is available on [github](https://github.com/Megcoin/megcoin)
 
 ## Block explorers
 
-* [megchain.earlz.net](http://megchain.earlz.net)
+* [megchain.earlz.net:8080](http://megchain.earlz.net:8080)
 
 ## Mining
 
