@@ -63,9 +63,11 @@ The source code is available on [github](https://github.com/Megcoin/megcoin) for
 
 ## Community and Resources
 
-* [reddit](http://www.reddit.com/r/megcoin)
-* #megcoin on IRC
-* [website](http://megcoin.com)
+* [Reddit](http://www.reddit.com/r/megcoin)
+* [Twitter](http://twitter.com/megcoindev)
+* [Facebook](http://facebook.com/megcoincrypto)
+* #megcoin on IRC/Freenode
+* [Website](http://megcoin.com)
 
 
 ## Block explorers
@@ -84,6 +86,9 @@ The source code is available on [github](https://github.com/Megcoin/megcoin) for
 * http://megpool.mooo.com
 * http://megpoolzws.com
 
+## Services
+
+* There is megtip, an IRC tipbot for Megcoin. Ask about getting it in your channel! 
 
 ## Nodes
 
@@ -102,3 +107,7 @@ There are multiple geographically-diverse DNS seeds built in to the wallet for f
 ## Testnet
 
 Also, if you would like to test services or mining with Megcoin, I have testnet nodes running so syncing should be trivial
+
+## Credits
+
+Thanks to artist, [address]
