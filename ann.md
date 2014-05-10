@@ -1,11 +1,20 @@
-# [ANN][SCRYPT-N-R][MEG] Megcoin | No premine | Forked from bitcoin 0.9 | New scrypt-N-R PoW | Digishield
+# [ANN][SCRYPT-N-R][MEG] Megcoin | No premine | Forked from bitcoin 0.9 | ASIC-resistant
 
-# [Megcoin - Get Megged [MEG]](http://megcoin.com)
+# [Megcoin - Most Extravagent Goat Coin [MEG]](http://megcoin.com)
 
-[img](http://i.imgur.com/TqxAuAN.png)
+[img](http://i.imgur.com/0wcPCvq.png)
+
+## About
+
+Megcoin is a revolutionary new cryptocurrency designed first and foremost as a currency. It is positioned to become a major cryptocurrency for many reasons. It uses a short payout streak and a new algorithm to ensure ASICs will never be a problem, nor will multipools. Megcoin is forked from Bitcoin 0.9 to ensure that all of the recent Bitcoin wallet enhancements apply to this coin as well. It was provably not premined and is fully featured with multiple geographically-diverse DNS seed nodes to ensure extremely fast wallet synchronizations. For a limited time it is CPU only, until a GPU miner is ported.
+
+## Rebrand and Reannouncement
+
+Not enough time was spent before launch making a good logo and marketing. This is a rebrand and reannouncement of the coin with a fresh look and better marketing strategy to correct that. All coins already mined are unchanged. This is only a new look and strategy with additional team members.
 
 ## Specifications:
 
+* Launched May 3rd, 2014
 * PoW Algo: Scrypt-8-4 (scrypt-n-r)
 * Premine: 0%
 * Total: infinite (20K final block reward)
@@ -13,7 +22,7 @@
 * Reward halved: every 200,000 blocks
 * Rewards mature: 120 blocks (~2 hours)
 * Difficulty adjustment: Every block, digishield
-* Wallet forked from Dogecoin 1.7/Bitcoin 0.9
+* Wallet forked from Bitcoin 0.9
 
 ## Reward schedule:
 
@@ -26,15 +35,17 @@
 
 ## Scrypt-N-R
 
-Megcoin's algorithm uses a new algorithm I've dubbed scrypt-N-R. Typically, `scrypt` means scrypt with N=1024, R=1, P=1. This algorithm changes R for more granular tuning of memory usage. Currently, there is only the wallet miner and cpuminer(minerd) ported to the new algorithm. The memory usage of scrypt-8-4 is only 4Kbytes, compared to normal scrypt where it is 128Kbytes. This means that GPUs and FPGAs will have a large advantage once they are ported to the algorithm. However, ASICs are not practical to make for Megcoin because of the short "primary mining" period of about 1.5 years. If ASICs were produced for the algorithm, it would be near the end of big rewards and when mining is needed more for network stability than for coin generation. 
+Megcoin's algorithm uses a new algorithm I've dubbed scrypt-N-R. Typically, `scrypt` means scrypt with N=1024, R=1, P=1. This algorithm changes R for more granular tuning of memory usage. Currently, there is only the wallet miner and cpuminer(minerd) ported to the new algorithm. The memory usage of scrypt-8-4 is only 4Kbytes, compared to normal scrypt where it is 128Kbytes. 
+
+Scrypt-R-N should be easily ported to GPUs and FPGAs. However, ASICs are not practical to make for Megcoin because of the short "payout streak" period of about 1.5 years. If ASICs were produced for the algorithm, it would be near the end of big rewards and when mining is needed more for network stability than for coin generation. 
 
 ## Digishield
 
-This uses the Digishield difficulty algorithm which has been proven stable by Dogecoin. Although multipools shouldn't be a worry with the unique algorithm parameters, digishield has been proven to handle large hashrate changes very well. 
+This uses the Digishield difficulty algorithm which has been proven stable by Dogecoin and Digicoin. Although multipools shouldn't be a worry with the unique algorithm parameters, digishield has been proven to handle large hashrate changes very well to ensure the network is never stuck with slow blocks or vulnerable to a timewarp attack.
 
-## Forked from Dogecoin 1.7/Bitcoin 0.9
+## Forked from Bitcoin 0.9
 
-Because it was forked from Dogecoin 1.7, which is forked from Bitcoin 0.9, Megcoin's wallet includes the many advancements that Bitcoin 0.9 has:
+Because it was forked form Bitcoin 0.9, Megcoin's wallet includes the many advancements that Bitcoin 0.9 has:
 
 * A faster graphical user interface (supporting Qt5 as well)
 * Fixes for transaction malleability
@@ -44,45 +55,48 @@ Because it was forked from Dogecoin 1.7, which is forked from Bitcoin 0.9, Megco
 ## Downloads
 
 * [Windows (32bit)](http://earlz.net/static/megcoin1.0win32.zip)
-* Mac OSX wallet coming soon 
+* Mac OSX wallet coming soon
+* Linux wallet coming soon 
 
-The source code is available on [github](https://github.com/Megcoin/megcoin) for compiling on Linux and elsewhere
+The source code is available on [github](https://github.com/Megcoin/megcoin) for self-compilation
 
-## Resources
+## Community and Resources
 
 * [reddit](http://www.reddit.com/r/megcoin)
+* #megcoin on IRC
 * [website](http://megcoin.com)
+
 
 ## Block explorers
 
-* [megchain.earlz.net:8080](http://megchain.earlz.net:8080)
+* http://cryptexplorer.com/chain/Megcoin
+* http://megchain.earlz.net:8080
 
 ## Mining
 
-* [cpuminer](https://bitbucket.org/earlz/megcpuminer) for mining with pools
+* [cpuminer](https://bitbucket.org/earlz/megcpuminer) [64bit Windows build](http://earlz.net/static/megcpuminer_win64.zip)
 * The wallet supports mining by using `setgenerate true -1`
-
-This should be very easily (and effeciently) mined by GPUs and even FPGAs due to it's low 4Kbyte memory requirement. I do not have the knowledge to port a GPU miner though, so this is why I've only ported cpuminer.
 
 ## Pools
 
-I'm running a [semi-private pool](http://megpool.earlz.net:8080) (because I don't have the expertise to run a pool reliably) that you can join into if you want. However, right now I recommend setting up p2pools or solomining because like I said, I am not an expert pool runner and I'd hate to lose people's coins
+* http://coins.rapidhash.net
+* http://megpool.mooo.com
+* http://megpoolzws.com
 
-Pools will be listed here as they are made. 
 
 ## Nodes
 
-I've tried to ensure there are plenty of servers for the initial rush of wallet syncs including nodes in the US, Europe, and Japan. However if you have a reliable node, report it to me and I'll add it to this list in case those servers get overloaded or are later scaled down for cost reasons. No addnode arguments should be required right now.
+There are multiple geographically-diverse DNS seeds built in to the wallet for fast syncing. However, if you have a reliable node, report it to me and I'll add it to this list in case those servers get overloaded. No addnode arguments should be required right now.
 
 ## Exchanges
 
-None yet, but soon! 
+* [Bittrex](http://bittrex.com) coming very soon
 
 ## Bounties
 
-This will be updated as I mine coins (since I didn't premine any)
-
-The biggest item on the list is GPU miners for both Nvidia and AMD
+* AMD GPU Miner -- 40 Million MEG (bounty address: [MSGoyrBfXad1Pv8Jqc3t74a2yBsDoDbE1G](http://cryptexplorer.com/address/MSGoyrBfXad1Pv8Jqc3t74a2yBsDoDbE1G)
+* Nvidia GPU Miner -- 3 Million MEG
+* Faucet -- 2 Million MEG
 
 ## Testnet
 
