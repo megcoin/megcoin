@@ -2,7 +2,7 @@
 
 # [Megcoin - Most Extravagent Goat Coin [MEG]](http://megcoin.com)
 
-![img](http://i.imgur.com/0wcPCvq.png)
+![img](http://i.imgur.com/TZhpOLN.png)
 
 
 ## About

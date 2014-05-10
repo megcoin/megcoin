@@ -1,7 +1,7 @@
 # Megcoin Core [MEG]
 ==========================
 
-![Megcoin](http://i.imgur.com/0wcPCvq.png)
+[![Megcoin](http://i.imgur.com/TZhpOLN.png)](http://megcoin.com)
 
 ## What is Megcoin?
 Megcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin, Megcoin currently employs a unique variant of scrypt.
@@ -50,6 +50,8 @@ The current block reward schedule:
 
 
 ### Building megcoin-qt on Linux
+
+See also this nice guide for building the wallet and getting started mining: http://piratepad.net/w50oqoqwub
 
     sudo apt-get install build-essential \
                          libssl-dev \
