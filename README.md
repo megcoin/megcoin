@@ -1,7 +1,7 @@
 # Megcoin Core [MEG]
 ==========================
 
-![Megcoin](http://i.imgur.com/TqxAuAN.png)
+![Megcoin](http://i.imgur.com/0wcPCvq.png)
 
 ## What is Megcoin?
 Megcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix, Litecoin, and Dogecoin, Megcoin currently employs a unique variant of scrypt.
