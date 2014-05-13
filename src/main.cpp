@@ -1132,14 +1132,34 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     {
         nSubsidy*=2; //1M
     }
-    if(nHeight < 1000000) 
+    if(nHeight < 17000)
     {
-        nSubsidy >>= (nHeight / 200000);
+        if(nHeight < 1000000) 
+        {
+            nSubsidy >>= (nHeight / 200000);
+        }
+        else
+        {
+            nSubsidy = 20000 * COIN; //20K after primary mining
+        }
+        return nSubsidy + nFees; //put return here because I was an idiot while doing the genesis block and might affect things
     }
     else
     {
-        nSubsidy = 20000 * COIN; //20K after primary mining
+        nSubsidy = 50000 * COIN;
+
+        //emergency fork to reduce supply
+        if(nHeight < 1000000) 
+        {
+            nSubsidy >>= (nHeight / 200000);
+        }
+        else
+        {
+            nSubsidy = 10 * COIN; //10 coins after primary mining
+        }
+
     }
+
 
     return nSubsidy + nFees;
 }
