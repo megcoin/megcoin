@@ -181,10 +181,16 @@ genesis.GetHash = d7b86348244577709049bdc782e08bb4f43b763ad3bca6c8212efc88fb8be9
         assert(hashGenesisBlock == uint256("0xd7b86348244577709049bdc782e08bb4f43b763ad3bca6c8212efc88fb8be9d3"));
         assert(genesis.hashMerkleRoot == uint256("0xf1c343ad330f75ca4bad0205acd909614f2b6548452ef5787180bbb5d2e03d50"));
         //use plenty of different domains to ensure if one goes down it will still work
+        vSeeds.push_back(CDNSSeedData("seedgeo.megcoin.com", "seedgeo.megcoin.com")); //seed that resolves to closest server
         vSeeds.push_back(CDNSSeedData("seed1.megcoin.com", "seed1.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed2.megcoin.com", "seed2.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed3.megcoin.com", "seed3.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net"));
+        vSeeds.push_back(CDNSSeedData("seed4.megcoin.com", "seed4.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed5.megcoin.com", "seed5.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed6.megcoin.com", "seed6.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net")); //backup domains
+        vSeeds.push_back(CDNSSeedData("megcoin2.cloudapp.net", "megcoin2.cloudapp.net"));
+        vSeeds.push_back(CDNSSeedData("megcoin3.cloudapp.net", "megcoin3.cloudapp.net"));
         vSeeds.push_back(CDNSSeedData("megseed.earlz.net", "megseed.earlz.net"));
 
         // Workaround for Boost not being quite compatible with C++11;
@@ -297,11 +303,16 @@ genesis.GetHash = 5698e383a91f59b92cbcfeff45d9c368645bacf52737f9a51491d7ec025dc0
         vFixedSeeds.clear();
         vSeeds.clear();
         //use plenty of different domains to ensure if one goes down it will still work
+        vSeeds.push_back(CDNSSeedData("seedgeo.megcoin.com", "seedgeo.megcoin.com")); //seed that resolves to closest server
         vSeeds.push_back(CDNSSeedData("seed1.megcoin.com", "seed1.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed2.megcoin.com", "seed2.megcoin.com"));
         vSeeds.push_back(CDNSSeedData("seed3.megcoin.com", "seed3.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("testnet.megcoin.com", "testnet.megcoin.com"));
-        vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net"));
+        vSeeds.push_back(CDNSSeedData("seed4.megcoin.com", "seed4.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed5.megcoin.com", "seed5.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed6.megcoin.com", "seed6.megcoin.com"));
+        vSeeds.push_back(CDNSSeedData("megcoin1.cloudapp.net", "megcoin1.cloudapp.net")); //backup domains
+        vSeeds.push_back(CDNSSeedData("megcoin2.cloudapp.net", "megcoin2.cloudapp.net"));
+        vSeeds.push_back(CDNSSeedData("megcoin3.cloudapp.net", "megcoin3.cloudapp.net"));
         vSeeds.push_back(CDNSSeedData("megseed.earlz.net", "megseed.earlz.net"));
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;

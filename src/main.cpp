@@ -698,7 +698,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
     return true;
 }
 
-static const double TransactionFeePercentage = 0.001;
+static const double TransactionFeePercentage = 0.005;
 
 int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, enum GetMinFee_mode mode)
 {
