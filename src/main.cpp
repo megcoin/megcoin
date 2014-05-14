@@ -737,7 +737,7 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
 #endif
     }
 
-    //if((time(NULL) > 1400284800 || mode==GMF_SEND) ) //relay free transactions until May 17, 2014 00:00 
+    if((time(NULL) > 1400284800L || mode==GMF_SEND) ) //relay free transactions until May 17, 2014 00:00 
     {
         // Megcoin
         // 
@@ -786,7 +786,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransa
 {
     fRejectInsaneFee=false;
 
-   // if((time(NULL) > 1400284800)) //relay free transactions until May 17, 2014 00:00 
+    if((time(NULL) > 1400284800L)) //relay free transactions until May 17, 2014 00:00 
     {
         fLimitFree=true;
     }
