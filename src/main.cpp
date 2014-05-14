@@ -743,12 +743,12 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
         // 
         BOOST_FOREACH(const CTxOut& txout, tx.vout)
         {
-            bool found=false; //do not add fees when sending to the same address 
+            bool found=false; //do not add fees when sending to the same address (this can be used for restructuring large single inputs)
             BOOST_FOREACH(const CTxIn& txin, tx.vin)
             {
                 if(txin.prevout.hash == txout.GetHash())
                 {        
-                    cout << txin.prevout.hash.ToString() << " -> " << txout.GetHash().ToString() << endl;
+                   // cout << txin.prevout.hash.ToString() << " -> " << txout.GetHash().ToString() << endl;
                     found=true;            
                 }
             }
