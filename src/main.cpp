@@ -698,6 +698,8 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
     return true;
 }
 
+static const double TransactionFeePercentage = 0.001;
+
 int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, enum GetMinFee_mode mode)
 {
     unsigned int nBlockSize = 1000;
@@ -735,6 +737,30 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
 #endif
     }
 
+    //if((time(NULL) > 1400284800 || mode==GMF_SEND) ) //relay free transactions until May 17, 2014 00:00 
+    {
+        // Megcoin
+        // 
+        BOOST_FOREACH(const CTxOut& txout, tx.vout)
+        {
+            bool found=false; //do not add fees when sending to the same address 
+            BOOST_FOREACH(const CTxIn& txin, tx.vin)
+            {
+                if(txin.prevout.hash == txout.GetHash())
+                {        
+                    cout << txin.prevout.hash.ToString() << " -> " << txout.GetHash().ToString() << endl;
+                    found=true;            
+                }
+            }
+            if(!found)
+            {
+                nMinFee += txout.nValue*TransactionFeePercentage;
+            }
+        }
+    }
+
+
+
     // Megcoin
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, tx.vout)
@@ -758,6 +784,12 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
 bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransaction &tx, bool fLimitFree,
                         bool* pfMissingInputs, bool fRejectInsaneFee)
 {
+    fRejectInsaneFee=false;
+
+   // if((time(NULL) > 1400284800)) //relay free transactions until May 17, 2014 00:00 
+    {
+        fLimitFree=true;
+    }
     if (pfMissingInputs)
         *pfMissingInputs = false;
 
@@ -1132,7 +1164,7 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     {
         nSubsidy*=2; //1M
     }
-    if(nHeight < 17000)
+    if(nHeight < 18000)
     {
         if(nHeight < 1000000) 
         {
@@ -1146,7 +1178,7 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     }
     else
     {
-        nSubsidy = 50000 * COIN;
+        nSubsidy = 50000 * COIN; //50K
 
         //emergency fork to reduce supply
         if(nHeight < 1000000) 
